@@ -11,15 +11,15 @@
 
 return [
     // 数据库类型
-    'type'            => '',
+    'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => ,
+    'hostname'        => '39.106.158.118',
     // 数据库名
-    'database'        => '',
+    'database'        => 'blog',
     // 用户名
-    'username'        => '',
+    'username'        => 'xk',
     // 密码
-    'password'        => '',
+    'password'        => 'lalala',
     // 端口
     'hostport'        => '',
     // 连接dsn
@@ -27,29 +27,29 @@ return [
     // 数据库连接参数
     'params'          => [],
     // 数据库编码默认采用utf8
-    'charset'         => '',
+    'charset'         => 'utf8',
     // 数据库表前缀
     'prefix'          => '',
     // 数据库调试模式
-    'debug'           => ,
+    'debug'           => true,
     // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
-    'deploy'          => ,
+    'deploy'          => 0,
     // 数据库读写是否分离 主从式有效
-    'rw_separate'     => ,
+    'rw_separate'     => false,
     // 读写分离后 主服务器数量
-    'master_num'      => ,
+    'master_num'      => 1,
     // 指定从服务器序号
     'slave_no'        => '',
     // 自动读取主库数据
-    'read_master'     => ,
+    'read_master'     => false,
     // 是否严格检查字段是否存在
-    'fields_strict'   => ,
+    'fields_strict'   => true,
     // 数据集返回类型
-    'resultset_type'  => '',
+    'resultset_type'  => 'array',
     // 自动写入时间戳字段
-    'auto_timestamp'  => ,
+    'auto_timestamp'  => false,
     // 时间字段取出后的默认时间格式
     'datetime_format' => 'Y-m-d H:i:s',
     // 是否需要进行SQL性能分析
-    'sql_explain'     => ,
+    'sql_explain'     => false,
 ];
