@@ -1,7 +1,7 @@
 ---------------------------------------------------------------
-[ 2019-03-19T15:01:57+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.006497s] [吞吐率：153.91req/s] [内存消耗：224.64kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:42:35+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/?model_id+trans_3=2&keywords=very
+[运行时间：0.009843s] [吞吐率：101.59req/s] [内存消耗：143.16kb] [文件加载：34]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12,28 +12,29 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
+  'referer' => 'http://192.168.238.144/blog/public/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
   'content-type' => '',
   'content-length' => '',
 )
 [ info ] [ PARAM ] array (
+  'model_id_trans_3' => '2',
+  'keywords' => 'very',
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
 [ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[/usr/share/nginx/html/blog/application/home/controller/Index.php:33]
 ---------------------------------------------------------------
-[ 2019-03-19T15:02:07+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.005215s] [吞吐率：191.76req/s] [内存消耗：220.41kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:42:51+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/?model_id+trans_3=2&keywords=very
+[运行时间：0.560110s] [吞吐率：1.79req/s] [内存消耗：493.45kb] [文件加载：50]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -44,28 +45,36 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
+  'referer' => 'http://192.168.238.144/blog/public/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
   'content-type' => '',
   'content-length' => '',
 )
 [ info ] [ PARAM ] array (
+  'model_id_trans_3' => '2',
+  'keywords' => 'very',
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.126455s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.203295s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.209022s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:02:07+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.004348s] [吞吐率：229.99req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:45:47+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/?model_id+trans_3=2&keywords=very
+[运行时间：0.460205s] [吞吐率：2.17req/s] [内存消耗：494.10kb] [文件加载：51]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -76,28 +85,36 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
+  'referer' => 'http://192.168.238.144/blog/public/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
   'content-type' => '',
   'content-length' => '',
 )
 [ info ] [ PARAM ] array (
+  'model_id_trans_3' => '2',
+  'keywords' => 'very',
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.178270s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.101625s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.142059s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:02:08+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.004228s] [吞吐率：236.53req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:45:54+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/?model_id+trans_3=2&keywords=very
+[运行时间：0.482754s] [吞吐率：2.07req/s] [内存消耗：465.88kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -108,28 +125,36 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
+  'referer' => 'http://192.168.238.144/blog/public/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
   'content-type' => '',
   'content-length' => '',
 )
 [ info ] [ PARAM ] array (
+  'model_id_trans_3' => '2',
+  'keywords' => 'very',
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.168578s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.100917s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.202907s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:06:09+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.007649s] [吞吐率：130.73req/s] [内存消耗：225.32kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:46:11+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.477291s] [吞吐率：2.10req/s] [内存消耗：464.02kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -140,203 +165,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:06:37+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.007119s] [吞吐率：140.47req/s] [内存消耗：224.73kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:06:54+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.007464s] [吞吐率：133.97req/s] [内存消耗：224.73kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:07:19+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.038514s] [吞吐率：25.96req/s] [内存消耗：224.91kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:09:16+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.008940s] [吞吐率：111.86req/s] [内存消耗：224.76kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:./nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:09:25+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.008793s] [吞吐率：113.73req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:../public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:10:04+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.012213s] [吞吐率：81.88req/s] [内存消耗：224.73kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -349,15 +178,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:../public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.164730s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.102872s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.202844s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:10:13+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.010099s] [吞吐率：99.02req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T19:56:11+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.467061s] [吞吐率：2.14req/s] [内存消耗：493.30kb] [文件加载：51]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -368,7 +201,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -382,15 +215,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:../public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.125319s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.097688s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.201131s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:10:30+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.015452s] [吞吐率：64.72req/s] [内存消耗：224.76kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:00:35+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.519591s] [吞吐率：1.92req/s] [内存消耗：465.23kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -401,13 +238,12 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
   'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'keep-alive',
   'host' => '192.168.238.144',
   'content-type' => '',
@@ -415,15 +251,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.187769s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.103377s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.202937s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:11:04+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.045162s] [吞吐率：22.14req/s] [内存消耗：224.76kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:03:56+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.459319s] [吞吐率：2.18req/s] [内存消耗：464.02kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -434,13 +274,12 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
   'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'keep-alive',
   'host' => '192.168.238.144',
   'content-type' => '',
@@ -448,15 +287,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.142220s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.103266s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.203788s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:11:41+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.017335s] [吞吐率：57.69req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:14:03+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.509213s] [吞吐率：1.96req/s] [内存消耗：464.02kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -467,13 +310,12 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
   'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'keep-alive',
   'host' => '192.168.238.144',
   'content-type' => '',
@@ -481,15 +323,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:../public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.192940s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.101679s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.204492s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:11:44+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.015349s] [吞吐率：65.15req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:14:32+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.476540s] [吞吐率：2.10req/s] [内存消耗：464.02kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -500,13 +346,12 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
   'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'keep-alive',
   'host' => '192.168.238.144',
   'content-type' => '',
@@ -514,15 +359,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:../public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.159410s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.104941s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.201459s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:12:02+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.007680s] [吞吐率：130.21req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:15:02+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.452434s] [吞吐率：2.21req/s] [内存消耗：552.47kb] [文件加载：48]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -533,7 +382,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -547,15 +396,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:@/public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.136414s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.102768s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.205836s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:12:57+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.007464s] [吞吐率：133.98req/s] [内存消耗：224.80kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:15:03+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.426610s] [吞吐率：2.34req/s] [内存消耗：464.06kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -566,29 +419,33 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
   'content-type' => '',
   'content-length' => '',
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:@/public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.175185s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.102618s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.138427s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:13:36+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.006250s] [吞吐率：160.00req/s] [内存消耗：142.27kb] [文件加载：33]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:48:07+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.808642s] [吞吐率：1.24req/s] [内存消耗：598.10kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -599,187 +456,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ LOG ] INIT File
-[ error ] [0]语法解析错误: syntax error, unexpected 'public' (T_PUBLIC)[/usr/share/nginx/html/tp5/application/home/controller/Index.php:10]
----------------------------------------------------------------
-[ 2019-03-19T15:14:29+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.004634s] [吞吐率：215.80req/s] [内存消耗：155.22kb] [文件加载：38]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:14:51+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.006380s] [吞吐率：156.74req/s] [内存消耗：222.46kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]致命错误: Call to undefined method app\home\controller\template::index()[/usr/share/nginx/html/tp5/application/home/controller/Index.php:10]
----------------------------------------------------------------
-[ 2019-03-19T15:15:03+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.015354s] [吞吐率：65.13req/s] [内存消耗：157.31kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:15:25+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.005904s] [吞吐率：169.38req/s] [内存消耗：220.52kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:15:28+08:00 ] 127.0.0.1 GET localhost/tp5/public/
-[运行时间：0.004519s] [吞吐率：221.29req/s] [内存消耗：155.93kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cache-control' => 'max-age=0',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
-  'host' => 'localhost',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:17:02+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.014508s] [吞吐率：68.93req/s] [内存消耗：153.41kb] [文件加载：37]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -792,135 +469,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:18:30+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.052933s] [吞吐率：18.89req/s] [内存消耗：154.72kb] [文件加载：37]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:18:41+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.006874s] [吞吐率：145.47req/s] [内存消耗：155.51kb] [文件加载：38]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:18:42+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.005189s] [吞吐率：192.72req/s] [内存消耗：154.91kb] [文件加载：38]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:18:52+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.015980s] [吞吐率：62.58req/s] [内存消耗：225.39kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:@/public/nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.165847s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.100883s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.136978s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:19:10+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.011644s] [吞吐率：85.88req/s] [内存消耗：219.94kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:48:31+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.449941s] [吞吐率：2.22req/s] [内存消耗：464.02kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -931,7 +492,43 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '192.168.238.144',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121970s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.105305s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.201409s ]
+---------------------------------------------------------------
+[ 2019-03-19T20:49:17+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.503421s] [吞吐率：1.99req/s] [内存消耗：464.06kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -945,14 +542,19 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.171887s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.105563s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.203689s ]
 ---------------------------------------------------------------
-[ 2019-03-19T15:19:24+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.012425s] [吞吐率：80.48req/s] [内存消耗：220.41kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
+[ 2019-03-19T20:57:59+08:00 ] 192.168.238.1 GET 192.168.238.144/blog/public/
+[运行时间：0.495273s] [吞吐率：2.02req/s] [内存消耗：464.06kb] [文件加载：49]
+[ info ] [ LANG ] /usr/share/nginx/html/blog/thinkphp/lang/zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -963,7 +565,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'cookie' => 'thinkphp_show_page_trace=0|4',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
   'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -977,1591 +579,12 @@
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
+[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/blog/application/home/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /usr/share/nginx/html/blog/public/../application/home/view/index/index.html [ array (
+  0 => 'nav',
 ) ]
 [ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:25+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008544s] [吞吐率：117.04req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:25+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.005909s] [吞吐率：169.23req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:26+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.006269s] [吞吐率：159.51req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:26+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.005053s] [吞吐率：197.90req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:27+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.006819s] [吞吐率：146.65req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:27+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.006837s] [吞吐率：146.26req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:51+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.017473s] [吞吐率：57.23req/s] [内存消耗：219.95kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:19:54+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.005934s] [吞吐率：168.52req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:20:27+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.099945s] [吞吐率：10.01req/s] [内存消耗：224.76kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:20:36+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.019683s] [吞吐率：50.80req/s] [内存消耗：224.72kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:22:55+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008727s] [吞吐率：114.59req/s] [内存消耗：225.26kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:22:56+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.023457s] [吞吐率：42.63req/s] [内存消耗：225.26kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:23:38+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.016466s] [吞吐率：60.73req/s] [内存消耗：224.84kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:23:44+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009559s] [吞吐率：104.61req/s] [内存消耗：221.84kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:24:07+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.012909s] [吞吐率：77.47req/s] [内存消耗：225.35kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:24:36+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.016402s] [吞吐率：60.97req/s] [内存消耗：224.76kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:nav.html[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:25:05+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.021985s] [吞吐率：45.49req/s] [内存消耗：224.72kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:25:07+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009515s] [吞吐率：105.10req/s] [内存消耗：224.72kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:27:00+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.020272s] [吞吐率：49.33req/s] [内存消耗：246.91kb] [文件加载：45]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [8]未定义变量: settings[/usr/share/nginx/html/tp5/runtime/temp/c44bc876783b3c0bcae5aebdc7605bd7.php:250]
----------------------------------------------------------------
-[ 2019-03-19T15:27:45+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.013706s] [吞吐率：72.96req/s] [内存消耗：240.59kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:28:24+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.062904s] [吞吐率：15.90req/s] [内存消耗：220.41kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:28:53+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.015828s] [吞吐率：63.18req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:29:14+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.007431s] [吞吐率：134.58req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:29:31+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.007291s] [吞吐率：137.15req/s] [内存消耗：219.99kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:30:21+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.007275s] [吞吐率：137.46req/s] [内存消耗：232.59kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:31:17+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.006644s] [吞吐率：150.51req/s] [内存消耗：240.59kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:31:29+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.012244s] [吞吐率：81.67req/s] [内存消耗：240.59kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:31:47+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008328s] [吞吐率：120.08req/s] [内存消耗：240.59kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:33:14+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.020931s] [吞吐率：47.78req/s] [内存消耗：241.38kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:33:41+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.012314s] [吞吐率：81.21req/s] [内存消耗：237.38kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [0]模板文件不存在:[/usr/share/nginx/html/tp5/thinkphp/library/think/Template.php:1074]
----------------------------------------------------------------
-[ 2019-03-19T15:33:59+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008531s] [吞吐率：117.22req/s] [内存消耗：236.60kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:34:29+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.007001s] [吞吐率：142.84req/s] [内存消耗：240.63kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:35:31+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009227s] [吞吐率：108.38req/s] [内存消耗：240.63kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:35:49+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008796s] [吞吐率：113.69req/s] [内存消耗：240.66kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:40:47+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009332s] [吞吐率：107.16req/s] [内存消耗：240.91kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:04+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.014815s] [吞吐率：67.50req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:16+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.011615s] [吞吐率：86.10req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:21+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009636s] [吞吐率：103.78req/s] [内存消耗：220.66kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:28+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.013334s] [吞吐率：75.00req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:37+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008411s] [吞吐率：118.89req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:42:51+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.011326s] [吞吐率：88.29req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:43:06+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.011949s] [吞吐率：83.69req/s] [内存消耗：240.95kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://192.168.238.144/tp5/public/',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:43:12+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.004468s] [吞吐率：223.82req/s] [内存消耗：220.41kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:47:45+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.011978s] [吞吐率：83.49req/s] [内存消耗：220.59kb] [文件加载：39]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:49:18+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.009239s] [吞吐率：108.24req/s] [内存消耗：240.66kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:49:24+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008224s] [吞吐率：121.60req/s] [内存消耗：240.66kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:49:53+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008893s] [吞吐率：112.45req/s] [内存消耗：248.54kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:49:58+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.008703s] [吞吐率：114.90req/s] [内存消耗：232.66kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-03-19T15:50:05+08:00 ] 192.168.238.1 GET 192.168.238.144/tp5/public/
-[运行时间：0.010137s] [吞吐率：98.65req/s] [内存消耗：248.54kb] [文件加载：41]
-[ info ] [ LANG ] /usr/share/nginx/html/tp5/thinkphp/lang/zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => '',
-    1 => NULL,
-    2 => NULL,
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'thinkphp_show_page_trace=0|0',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
-  'connection' => 'keep-alive',
-  'host' => '192.168.238.144',
-  'content-type' => '',
-  'content-length' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ RUN ] app\home\controller\index->index[ /usr/share/nginx/html/tp5/application/home/controller/Index.php ]
-[ info ] [ VIEW ] /usr/share/nginx/html/tp5/public/../application/home/view/index/index.html [ array (
-) ]
-[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.178305s ] mysql:host=39.106.158.118;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.100756s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` [ RunTime:0.203063s ]
