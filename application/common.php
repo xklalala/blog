@@ -10,3 +10,19 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+function json($message="", $code=0){
+	$data = [
+		'message'=>$message,
+		'code'=>$code
+	];
+	return json_encode($data);
+}
+
+function jsons($data=[],$message="", $code=0){
+	$data = [
+		'data'=>$data,
+		'message'=>$message,
+		'code'=>$code
+	];
+	return json_encode($data);
+}

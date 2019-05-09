@@ -8,12 +8,6 @@ class article extends Model
 
 	public function get_hit()
 	{
-		var_dump("expression");
-		var_dump("expression");
-		var_dump("expression");
-		var_dump("expression");
-		var_dump("expression");
-		echo "<hr/>";
 		$m = new article();
 		$data = $m->where(['status'=>1])->select();
 		$data = $data->toArray();
