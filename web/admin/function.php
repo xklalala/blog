@@ -72,9 +72,7 @@ $url = "http://api.map.baidu.com/geocoder/v2/?address=".$location."&output=json&
        		console.log(data.result.location.lat);
        		$.ajax({
        			url:url+"weather",
-		     	dataType:'jsonp',
-     		 	processData: false, 
-		     	type:'get',
+		     	type:'post',
 		     	success:function(data){
 		     		console.log(data);
 		     	},

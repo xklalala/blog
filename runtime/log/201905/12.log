@@ -12137,22 +12137,34 @@
 [ info ] [ RUN ] app\index\controller\Index->getWeater[ D:\wamp64\www\blog\application\index\controller\Index.php ]
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-05-12T13:46:44+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110209789819511991558_1557640004333&_=1557640004335
 [运行时间：0.348852s] [吞吐率：2.87req/s] [内存消耗：157.45kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+[ 2019-05-12T13:54:57+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/cate/get_cs
+[运行时间：0.331038s] [吞吐率：3.02req/s] [内存消耗：550.87kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'index',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'getWeater',
+=======
+    1 => 'category',
+    2 => 'getCategory_s',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12170,19 +12182,49 @@
 [ 2019-05-12T13:47:57+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110200795858238778504_1557640077773&_=1557640077775
 [运行时间：0.170829s] [吞吐率：5.85req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://127.0.0.1/blog/web/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001441s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.025400s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000745s ]
+---------------------------------------------------------------
+[ 2019-05-12T13:54:59+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/user/login
+[运行时间：0.019870s] [吞吐率：50.33req/s] [内存消耗：347.85kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'index',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'getWeater',
+=======
+    1 => 'user',
+    2 => 'login',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12200,19 +12242,51 @@
 [ 2019-05-12T13:48:01+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110208632140240029387_1557640080871&_=1557640080873
 [运行时间：0.172161s] [吞吐率：5.81req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '15',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/blog/web/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'name' => '',
+  'password' => '',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001030s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.001581s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = '' LIMIT 1 [ RunTime:0.000910s ]
+---------------------------------------------------------------
+[ 2019-05-12T13:55:08+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/user/login
+[运行时间：0.021859s] [吞吐率：45.75req/s] [内存消耗：348.71kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'index',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'getWeater',
+=======
+    1 => 'user',
+    2 => 'login',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12260,6 +12334,39 @@
 [ 2019-05-12T13:48:53+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110206414924726990869_1557640133063&_=1557640133065
 [运行时间：0.169120s] [吞吐率：5.91req/s] [内存消耗：157.34kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '20',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/blog/web/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'xk',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001147s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.001375s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = 'xk' LIMIT 1 [ RunTime:0.000786s ]
+---------------------------------------------------------------
+[ 2019-05-12T13:55:26+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
+[运行时间：0.080432s] [吞吐率：12.43req/s] [内存消耗：145.05kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12273,6 +12380,7 @@
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
   'x-requested-with' => 'XMLHttpRequest',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
@@ -12320,6 +12428,27 @@
 [ 2019-05-12T13:49:08+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110203441706498802397_1557640148120&_=1557640148122
 [运行时间：0.138230s] [吞吐率：7.23req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://127.0.0.1/blog/web/admin/function.php',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9p881nah8cci93b9oe72pvp3n7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]类型错误: Too few arguments to function app\index\controller\Index::get_weather_timeon(), 0 passed in C:\wamp64\www\blog\application\index\controller\Index.php on line 16 and exactly 2 expected[C:\wamp64\www\blog\application\index\controller\Index.php:42]
+---------------------------------------------------------------
+[ 2019-05-12T13:55:37+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
+[运行时间：0.021784s] [吞吐率：45.91req/s] [内存消耗：143.69kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12333,6 +12462,7 @@
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12350,19 +12480,46 @@
 [ 2019-05-12T13:49:33+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110206472419119220518_1557640173069&_=1557640173071
 [运行时间：0.148500s] [吞吐率：6.73req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://127.0.0.1/blog/web/admin/function.php',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9p881nah8cci93b9oe72pvp3n7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]类型错误: Too few arguments to function app\index\controller\Index::get_weather_timeon(), 0 passed in C:\wamp64\www\blog\application\index\controller\Index.php on line 16 and exactly 2 expected[C:\wamp64\www\blog\application\index\controller\Index.php:42]
+---------------------------------------------------------------
+[ 2019-05-12T13:56:00+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/cate/get_cs
+[运行时间：0.043439s] [吞吐率：23.02req/s] [内存消耗：418.15kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'index',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'getWeater',
+=======
+    1 => 'category',
+    2 => 'getCategory_s',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12380,19 +12537,48 @@
 [ 2019-05-12T13:50:10+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather
 [运行时间：0.149506s] [吞吐率：6.69req/s] [内存消耗：156.00kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001412s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001943s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000924s ]
+---------------------------------------------------------------
+[ 2019-05-12T13:56:14+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/user/login
+[运行时间：0.026301s] [吞吐率：38.02req/s] [内存消耗：348.62kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'index',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'getWeater',
+=======
+    1 => 'user',
+    2 => 'login',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   ),
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'accept' => '*/*',
   'origin' => 'http://blog.xukai.ink',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
@@ -12408,6 +12594,38 @@
 [ 2019-05-12T13:50:20+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110205433243472130156_1557640220645&_=1557640220647
 [运行时间：0.144254s] [吞吐率：6.93req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '20',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'xk',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001113s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.001639s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = 'xk' LIMIT 1 [ RunTime:0.000989s ]
+---------------------------------------------------------------
+[ 2019-05-12T13:56:25+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
+[运行时间：0.055865s] [吞吐率：17.90req/s] [内存消耗：143.13kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12421,6 +12639,7 @@
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12438,6 +12657,25 @@
 [ 2019-05-12T13:52:56+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery1102009100158832069627_1557640375967&_=1557640375969
 [运行时间：0.148418s] [吞吐率：6.74req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/function.php',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]类型错误: Too few arguments to function app\index\controller\Index::get_weather_timeon(), 0 passed in C:\wamp64\www\blog\application\index\controller\Index.php on line 16 and exactly 2 expected[C:\wamp64\www\blog\application\index\controller\Index.php:42]
+---------------------------------------------------------------
+[ 2019-05-12T13:57:12+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
+[运行时间：0.188327s] [吞吐率：5.31req/s] [内存消耗：155.87kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12451,6 +12689,7 @@
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12468,6 +12707,24 @@
 [ 2019-05-12T13:54:10+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery110203519109659125754_1557640450144&_=1557640450146
 [运行时间：0.139221s] [吞吐率：7.18req/s] [内存消耗：156.35kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/function.php',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-12T14:00:48+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
+[运行时间：0.141579s] [吞吐率：7.06req/s] [内存消耗：221.12kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12481,6 +12738,7 @@
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
+<<<<<<< HEAD
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'accept' => '*/*',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
@@ -12525,10 +12783,29 @@
 [ 2019-05-12T13:57:25+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
 [运行时间：0.026024s] [吞吐率：38.43req/s] [内存消耗：141.82kb] [文件加载：27]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/function.php',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-12T14:01:50+08:00 ] 219.229.250.118 POST blog_api.xukai.ink/blog/public/weather
+[运行时间：0.021255s] [吞吐率：47.05req/s] [内存消耗：142.05kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'weather',
     1 => NULL,
     2 => NULL,
@@ -12536,26 +12813,46 @@
 )
 [ info ] [ HEADER ] array (
   'host' => '127.0.0.1',
+=======
+    0 => 'blog',
+    1 => 'public',
+    2 => 'weather',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   'connection' => 'keep-alive',
   'content-length' => '0',
   'accept' => '*/*',
   'origin' => 'http://blog.xukai.ink',
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
   'referer' => 'http://blog.xukai.ink/admin/function.php',
+<<<<<<< HEAD
   'accept-encoding' => 'gzip, deflate, br',
+=======
+  'accept-encoding' => 'gzip, deflate',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
   'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-05-12T13:57:29+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
 [运行时间：0.017449s] [吞吐率：57.31req/s] [内存消耗：141.82kb] [文件加载：27]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+[ 2019-05-12T14:01:58+08:00 ] 219.229.250.118 GET blog_api.xukai.ink/blog/public/weather
+[运行时间：0.016661s] [吞吐率：60.02req/s] [内存消耗：141.11kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'weather',
     1 => NULL,
     2 => NULL,
@@ -12679,18 +12976,41 @@
   'referer' => 'http://blog.xukai.ink/admin/function.php',
   'accept-encoding' => 'gzip, deflate, br',
   'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+=======
+    0 => 'blog',
+    1 => 'public',
+    2 => 'weather',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'cookie' => 'pgv_pvi=1751938048; pgv_si=s661914624; UM_distinctid=16aaa30480044e-07d96e0598af8f-f353163-15f900-16aaa30480158e',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-05-12T14:00:36+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/weather
 [运行时间：0.020009s] [吞吐率：49.98req/s] [内存消耗：141.82kb] [文件加载：27]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+[ 2019-05-12T14:02:18+08:00 ] 219.229.250.118 GET blog_api.xukai.ink/blog/public/weather
+[运行时间：0.019408s] [吞吐率：51.53req/s] [内存消耗：141.50kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'weather',
     1 => NULL,
     2 => NULL,
@@ -12706,14 +13026,37 @@
   'referer' => 'http://blog.xukai.ink/admin/function.php',
   'accept-encoding' => 'gzip, deflate, br',
   'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+=======
+    0 => 'blog',
+    1 => 'public',
+    2 => 'weather',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'cookie' => 'pgv_pvi=1751938048; pgv_si=s661914624; UM_distinctid=16aaa30480044e-07d96e0598af8f-f353163-15f900-16aaa30480158e',
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 )
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-05-12T14:05:13+08:00 ] 127.0.0.1 GET 127.0.0.1/blog/public/weather?callback=jQuery1102017855982943813964_1557641113701&_=1557641113703
 [运行时间：0.159663s] [吞吐率：6.26req/s] [内存消耗：158.44kb] [文件加载：25]
 [ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+=======
+[ 2019-05-12T14:02:21+08:00 ] 219.229.250.118 POST blog_api.xukai.ink/weather
+[运行时间：0.050310s] [吞吐率：19.88req/s] [内存消耗：154.92kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -12725,6 +13068,7 @@
   'convert' => false,
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'host' => '127.0.0.1',
   'connection' => 'keep-alive',
   'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
@@ -12928,3 +13272,19 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001678s ]
 [ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.001093s ]
 [ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000686s ]
+=======
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/function.php',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1

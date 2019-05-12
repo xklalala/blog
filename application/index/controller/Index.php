@@ -11,6 +11,11 @@ class Index {
 	{
 		// var_dump($_SERVER);
 		// http://www.ip138.com/ips138.asp?ip=39.106.158.118&action=2
+<<<<<<< HEAD
+=======
+		header('Access-Control-Allow-Origin:*');
+
+>>>>>>> 212ea17c4daffd8886b2cc75074acdea28f662b1
 		$weather = $this->get_data($this->get_weather_timeon());
 		echo json_encode([
 			'message'=>'success',
