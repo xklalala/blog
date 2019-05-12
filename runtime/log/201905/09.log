@@ -1076,3 +1076,46 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001474s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001934s ]
 [ sql ] [ SQL ] INSERT INTO `b_article` (`title` , `content` , `c_time` , `u_id` , `u_name` , `hit` , `c_id` , `c_title` , `t_id`) VALUES ('php进阶' , '这个文章讲的是怎么进阶php' , '1557388363' , 1 , 'xk' , 0 , '6' , 'php学习' , '') [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2019-05-09T17:10:45+08:00 ] 127.0.0.1 POST 127.0.0.1/blog/public/user/login
+[运行时间：0.047757s] [吞吐率：20.94req/s] [内存消耗：374.30kb] [文件加载：35]
+[ info ] [ LANG ] D:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.11.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'd657da3e-7dea-4f87-b69d-79c3ae34c3ae',
+  'host' => '127.0.0.1',
+  'cookie' => 'PHPSESSID=p1bp50f9rjkb6flma9pcdhr2au',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------375323832333756262782857',
+  'content-length' => '271',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'password' => '123',
+  'name' => 'xk',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ D:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004518s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.002636s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = 'xk' LIMIT 1 [ RunTime:0.000595s ]

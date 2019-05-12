@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    width: 100px;
+    height: 200px;
+    border: 1px solid green;
+}
+.menu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.menu ul li{
+    float: left;
+    position: relative;
+}
+
+.menu ul li a, .menu ul li a:visited{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 104px;
+    height: 30px;
+    color: #000;
+    border: 1px solid #fff;
+    border-width: 1px 1px 0 0;
+    background: #c9c9a7;
+    line-height: 30px;
+    font-size: 11px;
+}
+/*隐藏二级菜单ul*/
+.menu ul li ul{
+    display: none;
+}/*隐藏结束*/
+
+.menu ul li:hover a{
+    color: #fff;
+    background: #b3ab79;
+}
+/*显示二级菜单*/
+.menu ul li:hover ul{
+    display: block;
+    position: relative;
+    top: 31px;
+    left: 0px;
+    width: 105px;
+}/*结束*/
+
+/*添加二级菜单鼠标移过的样式*/
+.menu ul li:hover ul li a{
+    display: block;
+    background: #faeec7;
+    color: #000;
+    width: 160px;
+}
+.menu ul li:hover ul li a:hover{
+    background: #dfc184;
+    color: #000;
+}
+

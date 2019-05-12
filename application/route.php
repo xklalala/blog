@@ -26,3 +26,4 @@ Route::post("article/edit", "index/article/edit");
 Route::post("tag/addTag", "index/tag/addTag");
 
 //
+Route::get("weather", "index/index/getWeater");
