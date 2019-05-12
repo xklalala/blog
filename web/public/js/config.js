@@ -1,1 +1,1 @@
-var url = 'http://127.0.0.1/blog/public/'
+var url = 'http://blog_api.xukai.ink/'
