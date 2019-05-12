@@ -11,8 +11,6 @@ class Index {
 	{
 		// var_dump($_SERVER);
 		// http://www.ip138.com/ips138.asp?ip=39.106.158.118&action=2
-
-
 		$weather = $this->get_data($this->get_weather_timeon());
 		echo json_encode([
 			'message'=>'success',
