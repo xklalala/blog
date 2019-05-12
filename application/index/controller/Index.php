@@ -9,7 +9,7 @@ class Index {
 
 	public function getWeater()
 	{
-		var_dump($_SERVER);
+		// var_dump($_SERVER);
 		// http://www.ip138.com/ips138.asp?ip=39.106.158.118&action=2
 
 
