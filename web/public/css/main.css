@@ -43,7 +43,7 @@
 .menu ul li:hover ul{
     display: block;
     position: relative;
-    top: 31px;
+    /*top: 31px;*/
     left: 0px;
     width: 105px;
 }/*结束*/
@@ -53,10 +53,59 @@
     display: block;
     background: #faeec7;
     color: #000;
-    width: 160px;
+    width: 104;
 }
 .menu ul li:hover ul li a:hover{
     background: #dfc184;
     color: #000;
+}
+
+.content{
+    width: 50%;
+    height: auto;
+    /*border: 1px solid red;*/
+    margin-left: 5%;
+    position: relative;
+    top: 100px;
+}
+
+.article{
+    width: 80%;
+    height: 140px;
+    border: 1px solid green;
+    margin-bottom: 1%;
+    padding: 20px;
+/*    position: relative;
+    top: 50px;*/
+}
+.article a{
+    text-decoration: none;
+}
+
+.guidang{
+    width: 10%;
+    height: 200px;
+    border: 1px solid red;
+    position: fixed;
+    left: 60%;
+    top: 150px;
+    padding: 20px;
+}
+.guidang li{
+    list-style: none;
+    text-align: left;
+}
+
+.guidang a{
+    text-decoration: none;
+}
+
+.footer{
+/*    width: 80px;
+    height: 80px;
+    border: 1px solid red;*/
+    margin-top: 20px;
+    height: 100%;
+    padding: 20px;
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/jquery.cookie.js"></script>
+	<script src="public/js/config.js"></script>
+	<script src="public/js/function.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+</head>
+<body>
+	<div class="menu" style="position: absolute; left: 10%;">
+        <ul id='nav'></ul>
+        <script src="public/js/nav.js"></script>
+    </div>
+    <div style="position: fixed;right: 10%;top: 10%;">
+    	<a href="index.html">返回主页</a>
+    </div>
+    <div class="content" id="content"></div>
+    <script type="text/javascript">
+    	$.ajax({
+			url:url+'article/get_category',
+			type:'post',
+			data:{id:$.cookie('cid'), type:$.cookie('category_type')},
+			success:function(res){
+				res = JSON.parse(res);
+				if(res.code == 1){
+					str = "";
+					for(i=0; i<res.data.length; i++){
+						str += '<div class="article"><a style="cursor:pointer;" onclick="detail('+res.data[i].id+')"><h2>'+res.data[i].title+'</h2>';
+						str += '<p>作者：'+res.data[i].u_name+'</p>';
+						str += '<p>标签：'+res.data[i].t_id+'</p>';
+						str += '<p>time：'+res.data[i].c_time+'</p>';
+						str += '<p>阅读量：'+res.data[i].hit+'</p>';
+						str += '<p>评论：'+res.data[i].common_num+'</p></a></div>';
+					}
+					if(str.length==0)
+				   		str += "<center><h2>暂无文章</h2></center>";
+				   	str += '<div class="footer"><center>&copy;xk&nbsp;QQ:2607780909&nbsp;email:2607780909@qq.com</center></div>';
+				   	
+					document.getElementById('content').innerHTML = str;
+					console.log(res);
+				}else{
+					alert(res.message);
+				}
+				
+			}
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/jquery.cookie.js"></script>
+	<script src="public/js/config.js"></script>
+	<script src="public/js/function.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+	<style type="text/css">
+		.detail{
+		    width: 80%;
+		    height: auto;
+		    border: 1px solid #ccc;
+		    position: absolute;
+		    left: 10%;
+		    top:  200px;
+		    padding: 20px;
+		}
+		.return{
+			position: fixed;
+			left: 80%;
+			top: 5%;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu" style="position: absolute; left: 10%;">
+        <ul id='nav'></ul>
+        <script src="public/js/nav.js"></script>
+    </div>
+    <div class="return">
+    	<a href="index.html" style="text-decoration: none;">返回主页</a><br/>
+    	<a onclick="window.history.go(-1)" style="cursor: pointer;">返回上一页</a>
+    </div>
+    <div class="detail" id="detail">
+    	
+    </div>
+    <div class="return_top">
+    	<a href="#nav" style="position:fixed;right:10%;bottom:50%">回到顶部</a>
+    </div>
+<script>
+	console.log($.cookie('index_article_id'));
+	$.ajax({
+		url:url+'article/get_detail',
+		type:'post',
+		data:{id:$.cookie('index_article_id')},
+		success:function(res){
+			res = JSON.parse(res);
+			if(res.code==1)
+			{
+				console.log(res);
+				str = '<h2 align="center">'+res.data.title+'</h2>';
+				str += '<h5 align="center" style="color: #1D82FE;">作者：'+res.data.u_name+' | 创建时间：'+res.data.c_time+' | 阅读量：'+res.data.hit+'</h5>';
+				str += res.data.content;
+				document.getElementById('detail').innerHTML = str;
+
+			}else{
+				alert(res.message);
+			}
+		}
+	});
+</script>
+</body>
+</html>

@@ -4,6 +4,10 @@ use app\index\model\b_user;
 use think\Session;
 
 class User extends Base {
+
+	public function __construct(){
+		header('Access-Control-Allow-Origin:*');
+	}
 	//判断用户名和密码是否正确
 	//$login false登陆， true修改密码
 	private function check($login = false) {

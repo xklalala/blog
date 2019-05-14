@@ -1,7 +1,5 @@
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
-// $ip = "";
-var_dump($ip);
 $url = "http://ip.tool.chinaz.com/".$ip;
 
 //随机IP

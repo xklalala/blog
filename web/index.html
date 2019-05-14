@@ -11,14 +11,9 @@
     </head>
     <link rel="stylesheet" type="text/css" href="public/css/login.css">
     <body>
-         <div class="menu">
+        <div class="menu" style="position: absolute; left: 10%;">
             <ul id='nav'></ul>
             <script src="public/js/nav.js"></script>
-        </div>
-        <br/>
-        <br/>
-        <div>
-            热门文章
         </div>
 
         <div class="login">
@@ -38,7 +33,30 @@
             }
         </script>
         </div>
-
        <script src="public/js/login.js"></script>
+
+
+       <div class="content" id="content"></div>
+        <div class="guidang">
+        <center><h2>归档</h2></center>
+        <br>
+           <center>
+               <ul>
+               <li><a href=""> 2019.8</a></li>
+               <li><a href=""> 2019.6</a></li>
+               <li><a href=""> 2018.5</a></li>
+           </ul>
+           </center>
+       </div>
+
+       
+      
+    <script src="public/js/get_info.js"></script> 
+    <script>
+      function detail(id){
+        $.cookie('index_article_id', id);
+        window.location.href="detail.html";
+      }
+    </script>
     </body>
 </html>
