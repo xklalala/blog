@@ -4,6 +4,7 @@ use app\index\model\b_user;
 use think\Cache;
 use app\common\tools\Rds;
 
+
 class User {
 	protected $redis;
 	public function __construct(){

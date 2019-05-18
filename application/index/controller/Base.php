@@ -1,10 +1,10 @@
 <?php
 namespace app\index\controller;
+
 use think\Cache;
 use app\common\tools\Rds;
 class Base {
 	public function __construct() {
-		
 		header('Access-Control-Allow-Origin:*');
 	}
 

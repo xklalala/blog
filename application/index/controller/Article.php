@@ -9,11 +9,13 @@ use app\common\tools\Rds;
 //验证器后面加上去吧2019.5.9
 class Article extends Base{
 	protected $redis;
+
 	private static $b_article;
 
 	public function __construct() {
 		// parent::__construct();
 		$this->redis = Rds::getRds();
+
 		self::$b_article = new b_article();
 		header('Access-Control-Allow-Origin:*');
 	}
@@ -21,6 +23,7 @@ class Article extends Base{
 	//添加文章
 	public function add() {
 		Base::isLogin();
+
 		// echo json_encode($_POST);
 		// return;
 		$json = ['message' => 'error', 'code' => 0];
@@ -94,7 +97,6 @@ class Article extends Base{
 			$model->e_time = time();
 			$model->u_id = Session::get('id');
 			$model->u_name = Session::get('name');
-			// $model->hit = 0;
 			$model->c_id = $arr[0];
 			$model->c_title = $arr[1];
 			$model->t_id = $_POST['t_id'];
@@ -107,6 +109,12 @@ class Article extends Base{
 		echo json_encode($json);
 		return;
 	}
+	public function list() {
+		$data = Db('b_article')->where(['status' => 1])->field('id, title, c_title, c_time, hit')->select();
+		// var_dump($data);
+		echo json_encode(['message' => 'success', 'code' => 1, 'data' => $data]);
+	}
+//===================
 
 	//获得首页用户信息
 	function get_list(){
