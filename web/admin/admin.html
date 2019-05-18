@@ -6,15 +6,89 @@
 	<script src="../public/js/jquery.min.js"></script>
 	<script src="../public/js/jquery.cookie.js"></script>
 	<script src="js/public.js"></script>
+	<script src="../public/js/config.js"></script>
+	<script>
+		console.log($.cookie('user'));
+		if(!$.cookie('user'))
+		{
+			alert('请登陆');
+			window.location.href="../"
+		} 
+
+	  var attime;
+	  function clock(){
+	  	var time=new Date();
+	  	attime= time.toLocaleString('chinese',{hour12:false});
+	    document.getElementById("clock").innerHTML = "现在时间："+attime;
+	  }
+	  setInterval(clock,1000);
+
+	</script>
 </head>
 <body>
-	<a href="">文章管理</a>
+
+	<a href="article.html">文章管理</a>
 	<a href="">类别管理</a>
 	<a href="">账号管理</a>
 	<a href="../">返回首页</a>
-	<a href="">退出登陆</a>
+	<a href="logout.html">退出登陆</a>
 	<div>
 		<h2>你好<script>document.write($.cookie('user'))</script>, 欢迎进入后台管理中心</h2>
+		<div>
+			<h3 id="clock"></h3>
+			<h3 id="ip"></h3>
+			<h4 id="weather"></h4>
+		</div>
 	</div>
+
+<script type="text/javascript">
+	$.ajax({
+		url:url+'index/location',
+		type:'post',
+		success:function(res){
+			res = JSON.parse(res);
+			if(res.code==1){
+				str = "你上网的ip地址为："+res.data.ip;
+				str += " 你的地理位置大概为："+res.data.location;
+				document.getElementById('ip').innerHTML = str;
+				$url = "http://api.map.baidu.com/geocoder/v2/?address="+res.data.location+"&output=json&ak=eAjKgMVzrnxUUBz4G13bsdpeyQ3sLpUh&callback=showLocation";
+				var weather;
+				$.ajax({
+			     url:$url,
+			     dataType:'jsonp',
+			     processData: false, 
+			     type:'get',
+			     success:function(data){
+			     	if(data.status==0){
+			     		// console.log(data.result.location.lng);
+			       // 		console.log(data.result.location.lat);
+			       		$.ajax({
+			       			url:url+"weather",
+					     	type:'post',
+					     	data:{lat:data.result.location.lat, lng:data.result.location.lng},
+					     	success:function(data){
+					     		data = JSON.parse(data);
+					     		if(data.code==1){
+					     			str = "如果你的地理位置没错，现在的天气情况是：<br/>";
+					     			str += " 天气："+data.data.condition;
+					     			str += " <br/>温度："+data.data.temp;
+					     			str += " <br/>风向："+data.data.wind;
+					     			str += "<br/>更新时间："+data.data.updatetime;
+					     			document.getElementById('weather').innerHTML = str;
+					     		}
+					     	},
+					     	error:function(XMLHttpRequest, textStatus, errorThrown) {
+					     	}
+					 	});
+			     	}
+			     },
+			     error:function(XMLHttpRequest, textStatus, errorThrown) {
+			     }});
+			}
+		}
+	});
+
+
+</script>
 </body>
 </html>

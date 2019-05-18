@@ -1,6 +1,5 @@
-if($.cookie('user') == $.cookie('7789'))
+if($.cookie('user') == null)
 {
 	alert('请登陆');
 	window.location.href="../"
 } 
-

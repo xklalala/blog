@@ -1,4 +1,4 @@
-
+window.userId = false;
 function login(){
     var user = document.getElementById('username').value;
     var pwd = document.getElementById('password').value;

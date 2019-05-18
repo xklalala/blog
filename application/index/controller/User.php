@@ -1,9 +1,15 @@
 <?php
 namespace app\index\controller;
 use app\index\model\b_user;
-use think\Session;
+use think\Cache;
+use app\common\tools\Rds;
 
-class User extends Base {
+class User {
+	protected $redis;
+	public function __construct(){
+		header('Access-Control-Allow-Origin:*');
+		$this->redis = Rds::getRds();
+	}
 	//判断用户名和密码是否正确
 	//$login false登陆， true修改密码
 	private function check($login = false) {
@@ -25,8 +31,9 @@ class User extends Base {
 
 				//如果是登陆功能
 				if (!$login) {
-					Session::set('id', $data->id);
-					Session::set('name', $data->name);
+					$this->redis->set(['id'.$data->id=>$data->id], 1800);
+					$this->redis->set(['name'.$data->id=>$data->name], 1800);
+					// $this->isLogin();
 				}
 			} else {
 				$json['message'] = '密码错误';
@@ -45,7 +52,7 @@ class User extends Base {
 
 	//退出
 	public function loginOut() {
-		$_SESSION = null;
+		XS::clear();
 		echo json("success", 1);
 		return;
 	}
@@ -67,6 +74,14 @@ class User extends Base {
 			}
 		}
 		return json_encode($status);
+	}
+
+	public function isLogin(){
+		if(isset($_POST['userId']))
+			if($this->redis->get('id'.$_POST['userId']) != $_POST['userId']){
+				echo json_encode(['message'=>'不在线', 'code'=>0]);
+			}else
+				echo json_encode(['message'=>'在线', 'code'=>1]);
 	}
 
 }

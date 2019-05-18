@@ -1,0 +1,19 @@
+<script src="../public/js/jquery.min.js"></script>
+<script src="../public/js/jquery.cookie.js"></script>
+<script src="../public/js/config.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		url:url+'user/lout',
+		type:'post',
+		success:function(res){
+			res = JSON.parse(res);
+			if(res.code == 1){
+				$.cookie('user', false);
+				// console.log($.cookie('user'));
+				window.location.href="../";
+			}else{
+				alert(res.message);
+			}
+		}
+	});
+</script>

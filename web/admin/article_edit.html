@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<script src="ueditor/ueditor.config.js"></script>
+	<script src="ueditor/ueditor.all.min.js"></script>
+	<script src="ueditor/lang/zh-cn/zh-cn.js"></script>
+	<script src="../public/js/jquery.min.js"></script>
+	<script src="../public/js/jquery.cookie.js"></script>
+	<script src="../public/js/config.js"></script>
+</head>
+<body>
+	<div style="width: 80%; border: 1px solid gray; margin: 0 auto; padding: 2%;">
+		<center><h2>修改文章</h2></center>
+		<div style="margin-bottom: 1%;">
+			<a href="../">返回首页</a>
+			<a href="article.html">返回上一页</a>
+			<a href="admin.html">返回后台主页</a>
+		</div>
+		<div style="margin-bottom: 2%;">
+			文章标题：<input type="text" id="title"><br/>
+			
+			<div id="articleType"></div>
+			<div id="tag"></div>
+			<script src="js/getCategory.js"></script>
+			<script src="js/getTag.js"></script>
+			<input type="hidden" id="article_id">
+		</div>
+		<!-- <script id="editor" type="text/plain" style="width:100%;height:auto; margin: 0 auto;"></script> -->
+		<script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+		<button style="width: 100%; height: 2%;margin-top: 1%; height: 35px;background-color: #84B9DF; color: #fff;" onclick="edit()" id="submit">提交</button>
+		<button style="position: fixed; top: 300px; left: 80%; width: 100px; height: 100px;background-color: #84B9DF;" onclick="edit()" id="submit">这里也可以提交</button>
+	</div>
+	<script>
+
+		var ue = UE.getEditor('editor');
+		function edit(){
+		document.getElementById('submit').style.disabled = "disabled";
+			var content = UE.getEditor('editor').getContent();
+
+			//获得标签内容
+			var tag = document.getElementsByName('tag');
+			var tagId = "";
+			for(i=0; i<tag.length;i++){
+				if(tag[i].checked){
+					tagId += tag[i].value;
+				}
+			}
+			// console.log(tagId);
+
+			var articleType = document.getElementById('articleTypes').value;
+			// console.log(articleType);
+
+			var title = document.getElementById('title').value;
+			// console.log(title);
+			id = $.cookie('article_id');
+			$.ajax({
+				type:'post',
+				url:url+'article/edit',
+				data:{title:title,content:content,c_id:articleType,t_id:tagId,id:id, userId:$.cookie('userId')},
+				success:function(res){
+					res = JSON.parse(res);
+					console.log(res);
+					if(res.code==1){
+						window.location.href="article.html";
+					}
+				},
+				error:function(res){
+				}
+			});
+		}
+
+
+window.onload = function(){
+		console.log($.cookie('editId'));
+		// if(flag == true)
+		$.ajax({
+			url:url+'article/getOne',
+			type:'post',
+			data:{id:$.cookie('editId')},
+			success:function(res){
+				res = JSON.parse(res);
+				if(res.code==1){
+					document.getElementById('title').value = res.data.title;
+					document.getElementById('articleTypes').value = res.data.c_id+','+res.data.c_title;
+					console.log(res.data.c_id);
+					// console.log(res.data.c_id[0]);
+
+					var tag = document.getElementsByName('tag');
+					console.log(tag.length);
+					for(j = 0; j<tag.length; j++){
+						console.log(j);
+						for(i=0; i<res.data.c_id.length;i++){
+							if(tag[j].value == res.data.c_id[i]){
+								tag[j].checked = true;
+							}
+						}
+					}
+					console.log(res.data.content);
+					UE.getEditor('editor').setContent(res.data.content);
+					// document.getElementById('article_id').value = res.data.id;
+					$.cookie('article_id', res.data.id);
+					// ueditor.addListener("ready", function () { 
+    	// 					ueditor.setContent(res.data.content);});
+
+					// var a;
+					// UE.getEditor('editor').body.innerHTML = res.data.content;
+				}
+			}
+		});
+
+
+}
+
+	</script>
+
+</body>
+</html>

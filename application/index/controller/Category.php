@@ -3,11 +3,12 @@ namespace app\index\controller;
 use app\index\controller\Base;
 use app\index\model\b_category;
 
-class Category extends Base {
+class Category {
 	private static $b_category;
 
 	public function __construct() {
-		parent::__construct();
+		// parent::__construct();
+		header('Access-Control-Allow-Origin:*');
 		self::$b_category = new b_category();
 	}
 
@@ -70,13 +71,14 @@ class Category extends Base {
 			$c_data = null;
 			foreach ($res2 as $k => $v) {
 				if ($value->id == $v->pid) {
-					$c_data[] = $v->name;
+					$c_data[]= ["title"=>$v->name, "id"=>$v->id];;
 					unset($res2[$k]);
 				}
 			}
 
 			$data[] = [
 				"title" => $value->name,
+				"id"=>$value->id,
 				"c_title" => $c_data,
 			];
 		}
@@ -116,6 +118,13 @@ class Category extends Base {
 		}
 		echo json_encode($json);
 		return;
+	}
+
+	public function getCategory_d(){
+		$res2 = b_category::all(function ($query) {
+			$query->where('pid', '>', 0);
+		})-> toArray();
+		echo json_encode(['message'=>'success', 'code'=>1, 'data'=>$res2]);
 	}
 
 }
