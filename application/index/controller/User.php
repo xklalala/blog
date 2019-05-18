@@ -53,7 +53,8 @@ class User {
 
 	//退出
 	public function loginOut() {
-		XS::clear();
+		if(isset($_POST['userId']))
+			$this->redis->del('id'.$_POST['userId']);
 		echo json("success", 1);
 		return;
 	}

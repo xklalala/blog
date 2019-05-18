@@ -5,6 +5,7 @@
 	$.ajax({
 		url:url+'user/lout',
 		type:'post',
+		data:{userId:$.cookie('userId')},
 		success:function(res){
 			res = JSON.parse(res);
 			if(res.code == 1){

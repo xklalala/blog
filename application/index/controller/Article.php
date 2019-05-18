@@ -7,17 +7,16 @@ use app\index\model\common;
 use app\index\model\b_category;
 use app\common\tools\Rds;
 //验证器后面加上去吧2019.5.9
-class Article extends Base{
+class Article{
 	protected $redis;
 
 	private static $b_article;
 
 	public function __construct() {
-		// parent::__construct();
-		$this->redis = Rds::getRds();
-
-		self::$b_article = new b_article();
 		header('Access-Control-Allow-Origin:*');
+		$this->redis = Rds::getRds();
+		self::$b_article = new b_article();
+		
 	}
 
 	//添加文章
@@ -53,11 +52,7 @@ class Article extends Base{
 		echo json_encode($json);
 		return;
 	}
-	public function list() {
-		$data = Db('b_article')->where(['status' => 1])->field('id, title, c_title, c_time, hit')->select();
-		// var_dump($data);
-		echo json_encode(['message' => 'success', 'code' => 1, 'data' => $data]);
-	}
+
 
 	public function del() {
 		if (isset($_POST['id']) && strlen(trim($_POST['id'])) != 0) {
@@ -118,6 +113,7 @@ class Article extends Base{
 
 	//获得首页用户信息
 	function get_list(){
+		header('Access-Control-Allow-Origin:*');
 		//获得文章评论总量
 		$tag = new Tag();
 		$tag = $tag->get_list();

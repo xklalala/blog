@@ -1,6 +1,7 @@
 $.ajax({
 	url:url+'article/get_list',
 	type:'post',
+ 
 	success:function(res){
 		res = JSON.parse(res);
 		if(res.code == 1){
@@ -15,7 +16,7 @@ $.ajax({
 			}
 		   	str += '<div class="footer"><center>&copy;xk&nbsp;QQ:2607780909&nbsp;email:2607780909@qq.com</center></div>';
 			document.getElementById('content').innerHTML = str;
-			console.log(res);
+			// console.log(res);
 		}else{
 			alert(res.message);
 		}

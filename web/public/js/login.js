@@ -7,7 +7,9 @@ function login(){
 		url:url+'user/login',
 		data:{'name':user, 'password':pwd},
 		success:function(res){
-			res = getJson(res);
+			console.log(res)
+			res = JSON.parse(res);
+			res = res.data;
 			console.log(res);
 			if(res.userId)
 			{
