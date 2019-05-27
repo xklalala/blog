@@ -14,6 +14,7 @@ class Category {
 
 	//新增文章分类（大类）
 	public function addCategory() {
+		// var_dump($_POST);exit;
 		$json = ['message' => 'error', 'code' => 0];
 
 		if (isset($_POST['name']) && strlen($_POST['name']) > 0) {
@@ -126,5 +127,5 @@ class Category {
 		})-> toArray();
 		echo json_encode(['message'=>'success', 'code'=>1, 'data'=>$res2]);
 	}
-
 }
+

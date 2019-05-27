@@ -79,11 +79,17 @@ class User {
 	}
 
 	public function isLogin(){
-		if(isset($_POST['userId']))
+		if(isset($_POST['userId'])){
 			if($this->redis->get('id'.$_POST['userId']) != $_POST['userId']){
-				echo json_encode(['message'=>'不在线', 'code'=>0]);
+				echo json_encode(['message'=>'不在线', 'code'=>'0']);
 			}else
-				echo json_encode(['message'=>'在线', 'code'=>1]);
+				echo json_encode(['message'=>'在线', 'code'=>'1']);
+
+			exit;
+		}
+			
+
+		echo json_encode(['message'=>'不在线', 'code'=>'0']);
 	}
 
 }

@@ -65,7 +65,6 @@ class Rds{
 	}
 
 	public function del($key){
-		var_dump($key);
 		return self::$redis->del($key);
 	}
 }

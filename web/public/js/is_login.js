@@ -7,7 +7,7 @@
 		// console.log(typeof res,res);
 		res = JSON.parse(res);
 		console.log(res);
-		if(res.code = 1){
+		if(res.code == "1"){
             document.getElementById('to-login').style.display = "none";
             document.getElementById('login-up').style.display = "block";
 		}else{

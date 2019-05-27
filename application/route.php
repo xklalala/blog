@@ -1,7 +1,7 @@
 <?php
 use think\Route;
 //登陆
-Route::post("user/login", "index/user/login");
+Route::post("user/login", "index/User/login");
 //登出
 Route::post("user/lout", "index/user/loginOut");
 //是否登陆
