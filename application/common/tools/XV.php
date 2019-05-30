@@ -13,6 +13,10 @@ namespace app\common\tools;
 //XV::v(['index_article_id', 'common'=>['len'=>4, 'name'=>'评论长度']], 'eq');
 //提交 {index_article_id:7, common:12}
 //返回：{message: "传过来的评论长度长度不合法, 长度必须为4", status: 0}
+
+//2019.5.30新增
+//XV::v(['article_id', 'content'=>['len'=>3, 'name'=>'评论长度', 'ban'=>['script','圾']]]);
+//禁止字符
 class XV{
 
 	public static function v($array, $default=null)
@@ -45,6 +49,7 @@ class XV{
 									$len = false;
 									$info = "长度必须为".$value;
 								}
+
 							}
 							if($len == false){
 								if(isset($v['name']))
@@ -52,7 +57,19 @@ class XV{
 								echo json_encode(['message'=>"传过来的".$k."长度不合法, ".$info, 'status'=>0]);
 								exit;
 							}
+							
 							break;
+					}
+					if(isset($v['ban']))
+					{
+						foreach ($v['ban'] as $banstr)
+						{
+							if(strpos($_POST[$k], $banstr) != null)
+							{
+								echo json_encode(['message'=>"传过来的评论存在不合法字符 ", 'status'=>0]);
+								exit;
+							}
+						}
 					}
 				}
 			}

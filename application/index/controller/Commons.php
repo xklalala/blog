@@ -8,7 +8,7 @@ class Commons{
 		header('Access-Control-Allow-Origin:*');
 	}
 	public function put(){
-		XV::v(['article_id', 'content'=>['len'=>3, 'name'=>'评论长度']]);
+		XV::v(['article_id', 'content'=>['len'=>3, 'name'=>'评论长度', 'ban'=>['script','圾']]]);
 		$_POST['time'] = date('Y-m-d H:i:s');
 		$_POST['ip'] = $ip = $_SERVER['REMOTE_ADDR'];
 		$location = (new Index())->getLocation(true);

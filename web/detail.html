@@ -75,7 +75,7 @@
 				if(res.status==0){
 					alert(res.message);
 				}else{
-					window.location.href='detail.html';
+					// window.location.href='detail.html';
 				}
 			}
 		});
@@ -96,10 +96,9 @@
 					for(i=0; i< res.data.length; i++){
 						str += "<div style='border-bottom:1px solid #ccc;'>"
 						str += "<b>"+res.data[i].ip +" -- "+res.data[i].time+" -- "+res.data[i].location+"：</b>";
-						str += res.data[i].content;
+						str += res.data[i].content.toString();
 						str += "</div>";
 					}
-					
 				}
 				str += "<br/><div><input type='text' id='common' placeholder='在此处输入你的评论'><button onclick='common_submit()'>提交</button></div>";
 				str += '<div class="footer"><center>&copy;xk&nbsp;QQ:2607780909&nbsp;email:2607780909@qq.com</center></div>';
