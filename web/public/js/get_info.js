@@ -4,6 +4,7 @@ $.ajax({
  
 	success:function(res){
 		res = JSON.parse(res);
+		// console.log(res)
 		if(res.code == 1){
 			str = "";
 			for(i=0; i<res.data.length; i++){

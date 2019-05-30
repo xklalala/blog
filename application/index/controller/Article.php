@@ -6,6 +6,8 @@ use think\Session;
 use app\index\model\common;
 use app\index\model\b_category;
 use app\common\tools\Rds;
+use app\common\tools\XV;
+use app\common\tools\RM;
 //验证器后面加上去吧2019.5.9
 class Article{
 	protected $redis;
@@ -43,6 +45,7 @@ class Article{
 			$model->c_id = $arr[0];
 			$model->c_title = $arr[1];
 			$model->t_id = $_POST['t_id'];
+			$model->guidang = date("Y.m", time());
 			$s = $model->save();
 			if ($s == 1) {
 				$json['message'] = 'success';
@@ -112,25 +115,30 @@ class Article{
 //===================
 
 	//获得首页用户信息
-	function get_list(){
+	function get_list($type = 'default'){
 		header('Access-Control-Allow-Origin:*');
 		//获得文章评论总量
+		if($type == 'default'){
+			$condition = ['status'=>1];
+		}else if($type == 'guidang'){
+			$condition = ['guidang'=>$_POST['guidang']];
+		}
 		$tag = new Tag();
 		$tag = $tag->get_list();
 		$common = Db::table('common')->field('article_id, count(article_id) as num')->group('article_id')->select();
-		$data = Db('b_article')->where(['status' => 1])->field('id, title, u_name,hit, c_id, c_title, t_id, c_time')->order('c_time desc')->select();
-
+		$data = Db('b_article')->where($condition)->field('id, title, u_name,hit, c_id, c_title, t_id, c_time')->order('c_time desc')->select();
 		foreach($data as $k=>$v){
+			$data[$k]['common_num'] = 0;
 			foreach($common as $key=>$value){
 				if($v['id']==$value['article_id'])
 				{
 					$data[$k]['common_num'] = $value['num'];
+					unset($common[$key]);
+					break;
 				}
-				else
-					$data[$k]['common_num'] = 0;
-				$data[$k]['c_time'] = date('Y-m-d', $v['c_time']);
-				$data[$k]['t_id'] = $this->get_tag($tag, $v['t_id']);
 			}
+			$data[$k]['c_time'] = date('Y-m-d', $v['c_time']);
+			$data[$k]['t_id'] = $this->get_tag($tag, $v['t_id']);
 		}
 		echo json_encode(['message'=>'success', 'code'=>1, 'data'=>$data]);
 	}
@@ -202,5 +210,18 @@ class Article{
 			
 		}
 		
+	}
+
+	public function guidang(){
+		// $_POST['guidang'] = '2019.05';
+		// var_dump(date("Y.m", time()));
+		XV::v(['guidang']);
+		$this->get_list('guidang');
+		// var_dump($data);
+	}
+	//获得归档列表
+	public function get_guidang(){
+		$data = Db::table('b_article')->where(['status'=>1])->field('guidang')->group('guidang')->select();
+		RM::r($data);
 	}
 }

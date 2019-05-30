@@ -34,6 +34,10 @@ Route::post('article/get_list', 'index/article/get_list');
 Route::post('article/get_detail', 'index/article/get_detail');
 //根据category_id来获取文章
 Route::post('article/get_category', 'index/article/get_category');
+//归档
+Route::post('category/guidang', 'index/article/guidang');
+//获得归档列表
+Route::post('category/get_guidang', 'index/article/get_guidang');
 //查询文章
 // Route::post("editPwd", "index/article/editPwd");
 //新增标签
@@ -46,3 +50,8 @@ Route::post("weather", "index/index/getWeater");
 
 //获取ip地址和地理地址
 Route::post('index/location', 'index/index/getLocation');
+//评论提交
+Route::post('common/put', 'index/commons/put');
+//得到评论
+Route::post('common/get', 'index/commons/get');
+

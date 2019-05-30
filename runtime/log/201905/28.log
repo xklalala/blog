@@ -1,0 +1,1271 @@
+---------------------------------------------------------------
+[ 2019-05-28T11:09:39+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.016531s] [吞吐率：60.49req/s] [内存消耗：464.54kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001665s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:39+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.017895s] [吞吐率：55.88req/s] [内存消耗：422.63kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001012s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.000914s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:39+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.011752s] [吞吐率：85.09req/s] [内存消耗：398.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.000591s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:39+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.006771s] [吞吐率：147.69req/s] [内存消耗：181.30kb] [文件加载：26]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:09:41+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/user/login
+[运行时间：0.010570s] [吞吐率：94.61req/s] [内存消耗：404.17kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'User',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'xk',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001686s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = 'xk' LIMIT 1 [ RunTime:0.000475s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:43+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/index/location
+[运行时间：0.305406s] [吞吐率：3.27req/s] [内存消耗：179.84kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getLocation',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getLocation[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:09:43+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/weather
+[运行时间：0.073114s] [吞吐率：13.68req/s] [内存消耗：179.69kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getWeater',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'lat' => '27.823457297444143',
+  'lng' => '114.92727986672726',
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:09:44+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/list
+[运行时间：0.009207s] [吞吐率：108.61req/s] [内存消耗：401.23kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000758s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:46+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.009556s] [吞吐率：104.65req/s] [内存消耗：463.23kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000849s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000524s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:09:46+08:00 ] 39.176.195.140 GET blog_api.xukai.ink/tag/get
+[运行时间：0.008484s] [吞吐率：117.87req/s] [内存消耗：393.04kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000870s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000546s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:27+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/list
+[运行时间：0.013648s] [吞吐率：73.27req/s] [内存消耗：401.23kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000779s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001068s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000602s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:31+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/index/location
+[运行时间：0.300829s] [吞吐率：3.32req/s] [内存消耗：179.84kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getLocation',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getLocation[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:10:31+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/weather
+[运行时间：0.050792s] [吞吐率：19.69req/s] [内存消耗：179.69kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getWeater',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'lat' => '27.823457297444143',
+  'lng' => '114.92727986672726',
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:10:32+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.009731s] [吞吐率：102.76req/s] [内存消耗：464.58kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000920s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000461s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:32+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_c
+[运行时间：0.007690s] [吞吐率：130.04req/s] [内存消耗：463.01kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000878s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000989s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000486s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:40+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/add_s
+[运行时间：0.010197s] [吞吐率：98.07req/s] [内存消耗：366.00kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'addCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => '链表',
+  'c_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->addCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000911s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001048s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `name` = '链表' LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] INSERT INTO `b_category` (`pid` , `name`) VALUES (5 , '链表') [ RunTime:0.000547s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:40+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.008956s] [吞吐率：111.65req/s] [内存消耗：464.70kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001031s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000986s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000510s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:40+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_c
+[运行时间：0.013450s] [吞吐率：74.35req/s] [内存消耗：463.01kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002656s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000528s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:43+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.015656s] [吞吐率：63.87req/s] [内存消耗：463.35kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006934s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:10:43+08:00 ] 39.176.195.140 GET blog_api.xukai.ink/tag/get
+[运行时间：0.011485s] [吞吐率：87.07req/s] [内存消耗：393.04kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005202s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000490s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:10+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/add
+[运行时间：0.015855s] [吞吐率：63.07req/s] [内存消耗：518.94kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '25468',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'LeetCode.206.单链表反转',
+  'content' => '<p>这次php倒是出乎意料。</p><p><img src="/ueditor/php/upload/image/20190528/1559013138619379.png" title="1559013138619379.png" alt="image.png"/></p><p><br/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1em; font-size: 13px; color: rgb(51, 51, 51); font-family: &quot;Chinese Quote&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; white-space: normal; background-color: rgb(255, 255, 255);">反转一个单链表。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1em; font-size: 13px; color: rgb(51, 51, 51); font-family: &quot;Chinese Quote&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">示例:</span></p><pre style="box-sizing: border-box; font-family: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13px; margin-top: 0px; margin-bottom: 1em; overflow: auto; background-color: rgb(247, 249, 250); padding: 10px 15px; color: rgb(38, 50, 56); line-height: 1.6; border-radius: 3px; white-space: pre-wrap;">输入:&nbsp;1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
+
+输出:&nbsp;5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</pre><p>常规的遍历法，java和php都不说了，都是Node对象</p><p>go的话，目前go小菜鸡，刚刚查了一下才知道可以这么写</p><p><span style="color: #4b69c6;">type</span> <span style="color: #7a3e9d;font-weight: bold;">ListNode</span> <span style="color: #4b69c6;">struct</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Val <span style="color: #7a3e9d;">int</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Next <span style="color: #777777;">*</span>ListNode</p><p><span style="color: #777777;">}</span></p><p><br/></p><p><span style="color: #4b69c6;">&nbsp;&nbsp;&nbsp;&nbsp;var</span> <span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">*</span>ListNode</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">next</span> <span style="color: #777777;">:=</span> <span style="color: #aa3731;font-weight: bold;">new</span><span style="color: #777777;">(</span>ListNode<span style="color: #777777;">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">next</span><span style="color: #777777;">.</span><span style="color: #7a3e9d;">Next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">for</span> head <span style="color: #777777;">!=</span> <span style="color: #9c5d27;">nil</span><span style="color: #777777;">{</span></p><p><span style="color: #777777;">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p>基本的思想都是定义两个变量 next 和 pre；不多说，看代码</p><p>=====================================================================</p><p><span style="color: #4b69c6;">type</span> <span style="color: #7a3e9d;font-weight: bold;">ListNode</span> <span style="color: #4b69c6;">struct</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Val <span style="color: #7a3e9d;">int</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Next <span style="color: #777777;">*</span>ListNode</p><p><span style="color: #777777;">}</span></p><p><span style="color: #4b69c6;">func</span> <span style="color: #aa3731;font-weight: bold;">reverseList</span><span style="color: #777777;">(</span>head <span style="color: #777777;">*</span>ListNode<span style="color: #777777;">)</span> <span style="color: #777777;">*</span>ListNode <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">if</span> head <span style="color: #777777;">==</span> <span style="color: #9c5d27;">nil</span> <span style="color: #777777;">||</span> head<span style="color: #777777;">.</span>Next <span style="color: #777777;">==</span> <span style="color: #9c5d27;">nil</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">return</span> head</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">var</span> <span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">*</span>ListNode</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">next</span> <span style="color: #777777;">:=</span> <span style="color: #aa3731;font-weight: bold;">new</span><span style="color: #777777;">(</span>ListNode<span style="color: #777777;">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">next</span><span style="color: #777777;">.</span><span style="color: #7a3e9d;">Next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">for</span> head <span style="color: #777777;">!=</span> <span style="color: #9c5d27;">nil</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">next</span> <span style="color: #777777;">=</span> head<span style="color: #777777;">.</span>Next</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">head</span><span style="color: #777777;">.</span><span style="color: #7a3e9d;">Next</span> <span style="color: #777777;">=</span> pre</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">=</span> head</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">head</span> <span style="color: #777777;">=</span> next</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">return</span> pre</p><p><span style="color: #777777;">}</span></p><p>================================================================================</p><p><span style="color: #7a3e9d;"></span></p><p><span style="color: #7a3e9d;">class</span> <span style="color: #7a3e9d;font-weight: bold;">ListNode</span> <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">public</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">val</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">0</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">public</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">function</span> <span style="color: #aa3731;font-weight: bold;">__construct</span><span style="color: #777777;">($</span><span style="color: #7a3e9d;">val</span><span style="color: #777777;">){$</span><span style="color: #9c5d27;">this</span><span style="color: #777777;">-&gt;</span><span style="color: #7a3e9d;">val</span> <span style="color: #777777;">=</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">val</span><span style="color: #777777;">;}</span></p><p><span style="color: #777777;">}</span></p><p><br/></p><p><span style="color: #7a3e9d;">class</span> <span style="color: #7a3e9d;font-weight: bold;">Solution</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7a3e9d;">function</span> <span style="color: #aa3731;font-weight: bold;">reverseList</span><span style="color: #777777;">($</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">)</span> <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">if</span><span style="color: #777777;">($</span><span style="color: #7a3e9d;">head</span> <span style="color: #777777;">==</span> <span style="color: #9c5d27;">null</span> <span style="color: #777777;">||</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">-&gt;</span><span style="color: #7a3e9d;">next</span> <span style="color: #777777;">==</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">return</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">while</span><span style="color: #777777;">($</span><span style="color: #7a3e9d;">head</span> <span style="color: #777777;">!=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">){</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">next</span> <span style="color: #777777;">=</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">-&gt;</span><span style="color: #7a3e9d;">next</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">-&gt;</span><span style="color: #7a3e9d;">next</span> <span style="color: #777777;">=</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">pre</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">pre</span> <span style="color: #777777;">=</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">$</span><span style="color: #7a3e9d;">head</span> <span style="color: #777777;">=</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">next</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #777777;">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #4b69c6;">return</span> <span style="color: #777777;">$</span><span style="color: #7a3e9d;">pre</span><span style="color: #777777;">;</span></p><p><span style="color: #777777;">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span style="color: #777777;">}</span></p><p><span style="color: #777777;"></span><br/></p><p>=====================================================================================</p><p><span style="color: #4b69c6;">public</span>&nbsp;<span style="color: #7a3e9d;">class</span> <span style="color: #9c5d27;">Node</span><span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;<span style="color: #4b69c6;">public</span> <span style="color: #7a3e9d;">int</span> <span style="color: #9c5d27;">value</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;<span style="color: #4b69c6;">public</span> <span style="color: #9c5d27;">Node</span> <span style="color: #9c5d27;">next</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;<span style="color: #4b69c6;">public</span> <span style="color: #aa3731;font-weight: bold;">Node</span><span style="color: #777777;">(</span><span style="color: #7a3e9d;">int</span> <span style="color: #9c5d27;">data</span><span style="color: #777777;">)</span> <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c5d27;">this</span><span style="color: #777777;">.</span><span style="color: #9c5d27;">value</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">data</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;<span style="color: #777777;">}</span></p><p><span style="color: #777777;">}</span></p><p><span style="color: #4b69c6;">public</span> <span style="color: #9c5d27;">Node</span> <span style="color: #aa3731;font-weight: bold;">reverse</span><span style="color: #777777;">(</span><span style="color: #9c5d27;">Node</span> <span style="color: #9c5d27;">head</span><span style="color: #777777;">)</span> <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;<span style="color: #9c5d27;">Node</span> <span style="color: #9c5d27;">pre</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;<span style="color: #9c5d27;">Node</span> <span style="color: #9c5d27;">next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;<span style="color: #4b69c6;">while</span><span style="color: #777777;">(</span><span style="color: #9c5d27;">head</span> <span style="color: #777777;">!=</span> <span style="color: #9c5d27;">null</span><span style="color: #777777;">)</span> <span style="color: #777777;">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c5d27;">next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">head</span><span style="color: #777777;">.</span><span style="color: #9c5d27;">next</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c5d27;">head</span><span style="color: #777777;">.</span><span style="color: #9c5d27;">next</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">pre</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c5d27;">pre</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">head</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c5d27;">head</span> <span style="color: #777777;">=</span> <span style="color: #9c5d27;">next</span><span style="color: #777777;">;</span></p><p>&nbsp;&nbsp;<span style="color: #777777;">}</span></p><p>&nbsp;&nbsp;<span style="color: #4b69c6;">return</span> <span style="color: #9c5d27;">pre</span><span style="color: #777777;">;</span></p><p><span style="color: #777777;">}</span></p><p><br/></p>',
+  'c_id' => '32,链表',
+  't_id' => '2',
+  'userId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->add[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000787s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] INSERT INTO `b_article` (`title` , `content` , `c_time` , `u_id` , `u_name` , `hit` , `c_id` , `c_title` , `t_id` , `guidang`) VALUES ('LeetCode.206.单链表反转' , '<p>这次php倒是出乎意料。</p><p><img src=\"/ueditor/php/upload/image/20190528/1559013138619379.png\" title=\"1559013138619379.png\" alt=\"image.png\"/></p><p><br/></p><p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1em; font-size: 13px; color: rgb(51, 51, 51); font-family: &quot;Chinese Quote&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; white-space: normal; background-color: rgb(255, 255, 255);\">反转一个单链表。</p><p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1em; font-size: 13px; color: rgb(51, 51, 51); font-family: &quot;Chinese Quote&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; white-space: normal; background-color: rgb(255, 255, 255);\"><span style=\"box-sizing: border-box; font-weight: bolder;\">示例:</span></p><pre style=\"box-sizing: border-box; font-family: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13px; margin-top: 0px; margin-bottom: 1em; overflow: auto; background-color: rgb(247, 249, 250); padding: 10px 15px; color: rgb(38, 50, 56); line-height: 1.6; border-radius: 3px; white-space: pre-wrap;\">输入:&nbsp;1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL\n\n输出:&nbsp;5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</pre><p>常规的遍历法，java和php都不说了，都是Node对象</p><p>go的话，目前go小菜鸡，刚刚查了一下才知道可以这么写</p><p><span style=\"color: #4b69c6;\">type</span> <span style=\"color: #7a3e9d;font-weight: bold;\">ListNode</span> <span style=\"color: #4b69c6;\">struct</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Val <span style=\"color: #7a3e9d;\">int</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Next <span style=\"color: #777777;\">*</span>ListNode</p><p><span style=\"color: #777777;\">}</span></p><p><br/></p><p><span style=\"color: #4b69c6;\">&nbsp;&nbsp;&nbsp;&nbsp;var</span> <span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">*</span>ListNode</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">:=</span> <span style=\"color: #aa3731;font-weight: bold;\">new</span><span style=\"color: #777777;\">(</span>ListNode<span style=\"color: #777777;\">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">next</span><span style=\"color: #777777;\">.</span><span style=\"color: #7a3e9d;\">Next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">for</span> head <span style=\"color: #777777;\">!=</span> <span style=\"color: #9c5d27;\">nil</span><span style=\"color: #777777;\">{</span></p><p><span style=\"color: #777777;\">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p>基本的思想都是定义两个变量 next 和 pre；不多说，看代码</p><p>=====================================================================</p><p><span style=\"color: #4b69c6;\">type</span> <span style=\"color: #7a3e9d;font-weight: bold;\">ListNode</span> <span style=\"color: #4b69c6;\">struct</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Val <span style=\"color: #7a3e9d;\">int</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Next <span style=\"color: #777777;\">*</span>ListNode</p><p><span style=\"color: #777777;\">}</span></p><p><span style=\"color: #4b69c6;\">func</span> <span style=\"color: #aa3731;font-weight: bold;\">reverseList</span><span style=\"color: #777777;\">(</span>head <span style=\"color: #777777;\">*</span>ListNode<span style=\"color: #777777;\">)</span> <span style=\"color: #777777;\">*</span>ListNode <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">if</span> head <span style=\"color: #777777;\">==</span> <span style=\"color: #9c5d27;\">nil</span> <span style=\"color: #777777;\">||</span> head<span style=\"color: #777777;\">.</span>Next <span style=\"color: #777777;\">==</span> <span style=\"color: #9c5d27;\">nil</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">return</span> head</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">var</span> <span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">*</span>ListNode</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">:=</span> <span style=\"color: #aa3731;font-weight: bold;\">new</span><span style=\"color: #777777;\">(</span>ListNode<span style=\"color: #777777;\">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">next</span><span style=\"color: #777777;\">.</span><span style=\"color: #7a3e9d;\">Next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">nil</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">for</span> head <span style=\"color: #777777;\">!=</span> <span style=\"color: #9c5d27;\">nil</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">=</span> head<span style=\"color: #777777;\">.</span>Next</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">.</span><span style=\"color: #7a3e9d;\">Next</span> <span style=\"color: #777777;\">=</span> pre</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">=</span> head</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">head</span> <span style=\"color: #777777;\">=</span> next</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">return</span> pre</p><p><span style=\"color: #777777;\">}</span></p><p>================================================================================</p><p><span style=\"color: #7a3e9d;\"></span></p><p><span style=\"color: #7a3e9d;\">class</span> <span style=\"color: #7a3e9d;font-weight: bold;\">ListNode</span> <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">public</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">val</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">0</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">public</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">function</span> <span style=\"color: #aa3731;font-weight: bold;\">__construct</span><span style=\"color: #777777;\">($</span><span style=\"color: #7a3e9d;\">val</span><span style=\"color: #777777;\">){$</span><span style=\"color: #9c5d27;\">this</span><span style=\"color: #777777;\">-&gt;</span><span style=\"color: #7a3e9d;\">val</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">val</span><span style=\"color: #777777;\">;}</span></p><p><span style=\"color: #777777;\">}</span></p><p><br/></p><p><span style=\"color: #7a3e9d;\">class</span> <span style=\"color: #7a3e9d;font-weight: bold;\">Solution</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #7a3e9d;\">function</span> <span style=\"color: #aa3731;font-weight: bold;\">reverseList</span><span style=\"color: #777777;\">($</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">)</span> <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">if</span><span style=\"color: #777777;\">($</span><span style=\"color: #7a3e9d;\">head</span> <span style=\"color: #777777;\">==</span> <span style=\"color: #9c5d27;\">null</span> <span style=\"color: #777777;\">||</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">-&gt;</span><span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">==</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">)</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">return</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">while</span><span style=\"color: #777777;\">($</span><span style=\"color: #7a3e9d;\">head</span> <span style=\"color: #777777;\">!=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">){</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">-&gt;</span><span style=\"color: #7a3e9d;\">next</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">-&gt;</span><span style=\"color: #7a3e9d;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">pre</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">head</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">next</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #777777;\">}</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #4b69c6;\">return</span> <span style=\"color: #777777;\">$</span><span style=\"color: #7a3e9d;\">pre</span><span style=\"color: #777777;\">;</span></p><p><span style=\"color: #777777;\">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span style=\"color: #777777;\">}</span></p><p><span style=\"color: #777777;\"></span><br/></p><p>=====================================================================================</p><p><span style=\"color: #4b69c6;\">public</span>&nbsp;<span style=\"color: #7a3e9d;\">class</span> <span style=\"color: #9c5d27;\">Node</span><span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;<span style=\"color: #4b69c6;\">public</span> <span style=\"color: #7a3e9d;\">int</span> <span style=\"color: #9c5d27;\">value</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;<span style=\"color: #4b69c6;\">public</span> <span style=\"color: #9c5d27;\">Node</span> <span style=\"color: #9c5d27;\">next</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;<span style=\"color: #4b69c6;\">public</span> <span style=\"color: #aa3731;font-weight: bold;\">Node</span><span style=\"color: #777777;\">(</span><span style=\"color: #7a3e9d;\">int</span> <span style=\"color: #9c5d27;\">data</span><span style=\"color: #777777;\">)</span> <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #9c5d27;\">this</span><span style=\"color: #777777;\">.</span><span style=\"color: #9c5d27;\">value</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">data</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;<span style=\"color: #777777;\">}</span></p><p><span style=\"color: #777777;\">}</span></p><p><span style=\"color: #4b69c6;\">public</span> <span style=\"color: #9c5d27;\">Node</span> <span style=\"color: #aa3731;font-weight: bold;\">reverse</span><span style=\"color: #777777;\">(</span><span style=\"color: #9c5d27;\">Node</span> <span style=\"color: #9c5d27;\">head</span><span style=\"color: #777777;\">)</span> <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;<span style=\"color: #9c5d27;\">Node</span> <span style=\"color: #9c5d27;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;<span style=\"color: #9c5d27;\">Node</span> <span style=\"color: #9c5d27;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;<span style=\"color: #4b69c6;\">while</span><span style=\"color: #777777;\">(</span><span style=\"color: #9c5d27;\">head</span> <span style=\"color: #777777;\">!=</span> <span style=\"color: #9c5d27;\">null</span><span style=\"color: #777777;\">)</span> <span style=\"color: #777777;\">{</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #9c5d27;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">head</span><span style=\"color: #777777;\">.</span><span style=\"color: #9c5d27;\">next</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #9c5d27;\">head</span><span style=\"color: #777777;\">.</span><span style=\"color: #9c5d27;\">next</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">pre</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #9c5d27;\">pre</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">head</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: #9c5d27;\">head</span> <span style=\"color: #777777;\">=</span> <span style=\"color: #9c5d27;\">next</span><span style=\"color: #777777;\">;</span></p><p>&nbsp;&nbsp;<span style=\"color: #777777;\">}</span></p><p>&nbsp;&nbsp;<span style=\"color: #4b69c6;\">return</span> <span style=\"color: #9c5d27;\">pre</span><span style=\"color: #777777;\">;</span></p><p><span style=\"color: #777777;\">}</span></p><p><br/></p>' , '1559013550' , 1 , 'xk' , 0 , '32' , '链表' , '2' , '2019.05') [ RunTime:0.000946s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:10+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/list
+[运行时间：0.008969s] [吞吐率：111.49req/s] [内存消耗：401.60kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000997s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000575s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:12+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.010448s] [吞吐率：95.71req/s] [内存消耗：463.35kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002679s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:12+08:00 ] 39.176.195.140 GET blog_api.xukai.ink/tag/get
+[运行时间：0.011047s] [吞吐率：90.52req/s] [内存消耗：393.04kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000542s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:14+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/index/location
+[运行时间：0.319680s] [吞吐率：3.13req/s] [内存消耗：179.84kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getLocation',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getLocation[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:19:15+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/weather
+[运行时间：0.059635s] [吞吐率：16.77req/s] [内存消耗：179.69kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getWeater',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'lat' => '27.823457297444143',
+  'lng' => '114.92727986672726',
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:19:15+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/list
+[运行时间：0.009451s] [吞吐率：105.81req/s] [内存消耗：401.60kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000959s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000595s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:16+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.016801s] [吞吐率：59.52req/s] [内存消耗：463.35kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009131s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000980s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000559s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:16+08:00 ] 39.176.195.140 GET blog_api.xukai.ink/tag/get
+[运行时间：0.013677s] [吞吐率：73.12req/s] [内存消耗：393.04kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006393s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000528s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:18+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/list
+[运行时间：0.010522s] [吞吐率：95.04req/s] [内存消耗：401.60kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001094s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000627s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:19+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.016183s] [吞吐率：61.79req/s] [内存消耗：464.67kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007839s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:19+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.016653s] [吞吐率：60.05req/s] [内存消耗：422.84kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005827s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.000873s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:19+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.008210s] [吞吐率：121.80req/s] [内存消耗：187.44kb] [文件加载：24]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '8',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'userId' => '1',
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-28T11:19:19+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.022738s] [吞吐率：43.98req/s] [内存消耗：398.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011157s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001045s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.000694s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:30+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.011780s] [吞吐率：84.89req/s] [内存消耗：464.69kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/guidang.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000938s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000500s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:30+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/category/guidang
+[运行时间：0.011833s] [吞吐率：84.51req/s] [内存消耗：422.13kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/guidang.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'guidang' => '2019.05',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000711s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000883s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `guidang` = '2019.05' ORDER BY `c_time` DESC [ RunTime:0.000890s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:38+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.020920s] [吞吐率：47.80req/s] [内存消耗：464.69kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011629s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000515s ]
+---------------------------------------------------------------
+[ 2019-05-28T11:19:38+08:00 ] 39.176.195.140 POST blog_api.xukai.ink/article/get_detail
+[运行时间：0.024014s] [吞吐率：41.64req/s] [内存消耗：468.80kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '22',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_detail[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005979s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000725s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `hit`=`hit`+1  WHERE  `id` = 22 [ RunTime:0.000594s ]

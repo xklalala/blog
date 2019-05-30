@@ -78,7 +78,7 @@ class Index {
 
 
 	//获得ip地址和地理地址
-	public function getLocation(){
+	public function getLocation($get_location=false){
 		$ip = $_SERVER['REMOTE_ADDR'];
 		$url = "http://ip.tool.chinaz.com/".$ip;
 		$str = $this->Curl($url);
@@ -89,6 +89,8 @@ class Index {
 		$str = mb_substr($str, $start, $end);
 		$end = mb_strrpos($str, '</span>');
 		$location = mb_substr($str, 0, $end);
+		if($get_location == true)
+			return $location;
 		echo json_encode(['message'=>'success', 'code'=>1, 'data'=>['ip'=>$ip,'location'=>$location]]);
 	}
 

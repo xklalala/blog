@@ -40,6 +40,7 @@
     <div class="return_top">
     	<a href="#nav" style="position:fixed;right:10%;bottom:50%">回到顶部</a>
     </div>
+    <script type="text/javascript"></script>
 <script>
 	// console.log($.cookie('index_article_id'));
 	$.ajax({
@@ -50,17 +51,62 @@
 			res = JSON.parse(res);
 			if(res.code==1)
 			{
-				console.log(res);
+				// console.log(res);
 				str = '<h2 align="center">'+res.data.title+'</h2>';
 				str += '<h5 align="center" style="color: #1D82FE;">作者：'+res.data.u_name+' | 创建时间：'+res.data.c_time+' | 阅读量：'+res.data.hit+'</h5>';
 				str += res.data.content;
-				document.getElementById('detail').innerHTML = str;
-
+				get_common(str);
 			}else{
 				alert(res.message);
 			}
 		}
 	});
+	function common_submit(){
+		var common = document.getElementById('common');
+		common.style.disabled = 'disabled';
+		common = common.value;
+		$.ajax({
+			url  : url + 'common/put',
+			type : 'post',
+			data : {article_id:$.cookie('index_article_id'), content:common},
+			success:function(res){
+				res = JSON.parse(res)
+				
+				if(res.status==0){
+					alert(res.message);
+				}else{
+					window.location.href='detail.html';
+				}
+			}
+		});
+	}
+	function get_common(str){
+		$.ajax({
+			url  : url + 'common/get',
+			type : 'post',
+			data : {article_id : $.cookie('index_article_id')},
+			success:function(res){
+				res = JSON.parse(res);
+				// console.log(res);
+				if(res.status == '1')
+				{
+					str += "<h2 align='center'>评论</h2>";
+					// if(res.data)
+					// console.log(res)
+					for(i=0; i< res.data.length; i++){
+						str += "<div style='border-bottom:1px solid #ccc;'>"
+						str += "<b>"+res.data[i].ip +" -- "+res.data[i].time+" -- "+res.data[i].location+"：</b>";
+						str += res.data[i].content;
+						str += "</div>";
+					}
+					
+				}
+				str += "<br/><div><input type='text' id='common' placeholder='在此处输入你的评论'><button onclick='common_submit()'>提交</button></div>";
+				str += '<div class="footer"><center>&copy;xk&nbsp;QQ:2607780909&nbsp;email:2607780909@qq.com</center></div>';
+					document.getElementById('detail').innerHTML = str;
+			}
+		});
+	}
 </script>
 </body>
 </html>

@@ -8,7 +8,6 @@
 	<script src="js/public.js"></script>
 	<script src="../public/js/config.js"></script>
 	<script>
-		console.log($.cookie('user'));
 		if(!$.cookie('user'))
 		{
 			alert('请登陆');
@@ -29,11 +28,11 @@
 
 	<a href="article.html">文章管理</a>
 	<a href="category.html">类别管理</a>
-	<a href="">账号管理</a>
+	<!-- <a href="">账号管理</a> -->
 	<a href="../">返回首页</a>
 	<a href="logout.html">退出登陆</a>
 	<div>
-		<h2>你好<script>document.write($.cookie('user'))</script>, 欢迎进入后台管理中心</h2>
+		<h2>你好, 欢迎进入后台管理中心</h2>
 		<div>
 			<h3 id="clock"></h3>
 			<h3 id="ip"></h3>

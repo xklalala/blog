@@ -7,7 +7,7 @@ $.ajax({
 		var data = getJson(res);
 		let nav = document.querySelector('#nav');
 		let fragment = document.createDocumentFragment();
-		console.log(data);
+		// console.log(data);
 		for (let i = 0, length = data.length; i < length; i++)
 		{
 			let liNode = document.createElement('li');

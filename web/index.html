@@ -21,7 +21,8 @@
             <div id="to-login">
                 <input type="text" name="user" id="username" placeholder="用户名"><br/>
                 <input type="password" name="pwd"  id="password" placeholder="密码"><br/>
-                <button onclick="login()">登陆</button>
+                <button onclick="login()">登陆</button><br/>
+                登陆账号  xk  密码 123
             </div>
             <div id="login-up" style="display: none;">
                 您好，<span id="user-name"><script>document.write($.cookie('user'))</script></span>欢迎登陆<br/>
@@ -39,11 +40,8 @@
         <center><h2>归档</h2></center>
         <br>
            <center>
-               <ul>
-               <li><a href=""> 2019.8</a></li>
-               <li><a href=""> 2019.6</a></li>
-               <li><a href=""> 2018.5</a></li>
-           </ul>
+              <ul id="guidang">
+              </ul>
            </center>
        </div>
 
@@ -55,7 +53,27 @@
         $.cookie('index_article_id', id);
         window.location.href="detail.html";
       }
+      $.ajax({
+        url:url+'category/get_guidang',
+        type:'post',
+        success:function(res){
+          res = JSON.parse(res);
+          if(res.status=='1'){
+            str = "";
+            for(i=0; i<res.data.length; i++){
+              // console.log(res.data[i])
+              str += "<li><a  onclick=guidang("+res.data[i].guidang+")>"+res.data[i].guidang+"</a></li>";
+            }
+            document.getElementById('guidang').innerHTML = str;
+          }
+        }
+      });
 
+      function guidang(res){
+        // console.log(res);
+        $.cookie('guidang', res);
+        window.location.href="guidang.html";
+      }
     </script>
      <script src="public/js/is_login.js"></script>
     </body>

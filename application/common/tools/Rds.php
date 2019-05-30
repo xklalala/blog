@@ -68,3 +68,9 @@ class Rds{
 		return self::$redis->del($key);
 	}
 }
+
+// $redis = Rds::getRds();
+// $redis->set(['name'=>'xk']);
+// var_dump($redis->get('name'));
+// var_dump($redis->del('name'));
+// var_dump($redis->get('name'));

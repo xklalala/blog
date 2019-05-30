@@ -17,12 +17,19 @@
     <div style="position: fixed;right: 10%;top: 10%;">
     	<a href="index.html">返回主页</a>
     </div>
+    <div style="position: absolute;top: 6%; left: 20%;">
+    	<h2>
+	    	<script type="text/javascript">
+	    	    	document.write($.cookie('guidang'))
+	    	</script>
+		</h2>
+	</div>
     <div class="content" id="content"></div>
     <script type="text/javascript">
     	$.ajax({
-			url:url+'article/get_category',
+			url:url+'category/guidang',
 			type:'post',
-			data:{id:$.cookie('cid'), type:$.cookie('category_type')},
+			data:{guidang:$.cookie('guidang')},
 			success:function(res){
 				res = JSON.parse(res);
 				if(res.code == 1){
@@ -40,14 +47,14 @@
 				   	str += '<div class="footer"><center>&copy;xk&nbsp;QQ:2607780909&nbsp;email:2607780909@qq.com</center></div>';
 				   	
 					document.getElementById('content').innerHTML = str;
-					// console.log(res);
+					console.log(res);
 				}else{
 					alert(res.message);
 				}
 			}
 		});
     </script>
-    <script>
+        <script>
       function detail(id){
         $.cookie('index_article_id', id);
         window.location.href="detail.html";

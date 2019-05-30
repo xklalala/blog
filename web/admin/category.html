@@ -57,7 +57,7 @@
 		url:url+'cate/get_c',
 		success:function(res){
 			res  = JSON.parse(res);
-			console.log(res)
+			// console.log(res)
 			if(res.code==1){
 				var str = "小类：<select name='articleType' id='articleTypes'>";
 				for (i=0;i<res.data.length; i++){
