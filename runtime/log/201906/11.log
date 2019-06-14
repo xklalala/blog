@@ -1,0 +1,2269 @@
+---------------------------------------------------------------
+[ 2019-06-11T14:01:41+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.025764s] [吞吐率：38.81req/s] [内存消耗：467.93kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001109s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001673s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000524s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:41+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.060825s] [吞吐率：16.44req/s] [内存消耗：428.23kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001449s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001812s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.001910s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.005590s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:41+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.086299s] [吞吐率：11.59req/s] [内存消耗：401.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000777s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001545s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.065741s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:41+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.067290s] [吞吐率：14.86req/s] [内存消耗：184.23kb] [文件加载：26]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:42+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/login
+[运行时间：0.032978s] [吞吐率：30.32req/s] [内存消耗：407.11kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'User',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'xk',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000848s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_user` [ RunTime:0.001639s ]
+[ sql ] [ SQL ] SELECT * FROM `b_user` WHERE  `name` = 'xk' LIMIT 1 [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:43+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/index/location
+[运行时间：0.294098s] [吞吐率：3.40req/s] [内存消耗：182.77kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getLocation',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getLocation[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:44+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/weather
+[运行时间：0.126040s] [吞吐率：7.93req/s] [内存消耗：182.63kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getWeater',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'lat' => '27.823457297444143',
+  'lng' => '114.92727986672726',
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:45+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/list
+[运行时间：0.009093s] [吞吐率：109.98req/s] [内存消耗：405.59kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000773s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001116s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000518s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:46+08:00 ] 39.176.195.177 GET blog_api.xukai.ink/tag/get
+[运行时间：0.015228s] [吞吐率：65.67req/s] [内存消耗：395.98kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006032s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.002254s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001937s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:46+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.022398s] [吞吐率：44.65req/s] [内存消耗：466.62kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008382s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.005358s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000915s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:50+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/list
+[运行时间：0.009716s] [吞吐率：102.92req/s] [内存消耗：405.59kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000515s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:51+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.019284s] [吞吐率：51.86req/s] [内存消耗：467.94kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007976s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.002481s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.001266s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:51+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.017691s] [吞吐率：56.53req/s] [内存消耗：428.23kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001266s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.002547s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.003047s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000959s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:52+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.010870s] [吞吐率：91.99req/s] [内存消耗：401.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000800s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001097s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.001336s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:52+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.004785s] [吞吐率：208.98req/s] [内存消耗：190.38kb] [文件加载：24]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '8',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'userId' => '1',
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:53+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/index/location
+[运行时间：0.305078s] [吞吐率：3.28req/s] [内存消耗：182.77kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getLocation',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getLocation[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:53+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/weather
+[运行时间：0.075118s] [吞吐率：13.31req/s] [内存消耗：182.63kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'getWeater',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'lat' => '27.823457297444143',
+  'lng' => '114.92727986672726',
+)
+[ info ] [ RUN ] app\index\controller\Index->getWeater[ C:\wamp64\www\blog\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T14:01:55+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.013770s] [吞吐率：72.62req/s] [内存消耗：467.97kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006334s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000375s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:01:55+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_c
+[运行时间：0.012135s] [吞吐率：82.41req/s] [内存消耗：466.17kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005518s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000373s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:05+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/add
+[运行时间：0.030341s] [吞吐率：32.96req/s] [内存消耗：367.52kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'addCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '10',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'Linux',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->addCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000822s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001667s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `name` = 'Linux' LIMIT 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] INSERT INTO `b_category` (`pid` , `name`) VALUES (0 , 'Linux') [ RunTime:0.017075s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.009522s] [吞吐率：105.02req/s] [内存消耗：467.97kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000938s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001604s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000505s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_c
+[运行时间：0.013173s] [吞吐率：75.91req/s] [内存消耗：466.30kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002740s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000497s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/add_s
+[运行时间：0.009088s] [吞吐率：110.03req/s] [内存消耗：369.01kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'addCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '49',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => '期末实验',
+  'c_id' => '41',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->addCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000838s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000991s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `id` = 41 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `name` = '期末实验' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] INSERT INTO `b_category` (`pid` , `name`) VALUES (41 , '期末实验') [ RunTime:0.000370s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.009673s] [吞吐率：103.38req/s] [内存消耗：468.04kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000918s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001655s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_c
+[运行时间：0.009531s] [吞吐率：104.92req/s] [内存消耗：466.30kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/category.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002775s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000468s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:16+08:00 ] 39.176.195.177 GET blog_api.xukai.ink/tag/get
+[运行时间：0.010048s] [吞吐率：99.52req/s] [内存消耗：395.98kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001620s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001857s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001007s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:16+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.018036s] [吞吐率：55.45req/s] [内存消耗：466.69kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007886s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.002214s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.002428s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:53+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/add
+[运行时间：0.055921s] [吞吐率：17.88req/s] [内存消耗：385.07kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '226',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'linux一些命令',
+  'content' => '<p>本实验均在centos7上完成<br/></p>',
+  'c_id' => '42,期末实验',
+  't_id' => '2',
+  'userId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->add[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.002127s ]
+[ sql ] [ SQL ] INSERT INTO `b_article` (`title` , `content` , `c_time` , `u_id` , `u_name` , `hit` , `c_id` , `c_title` , `t_id` , `guidang`) VALUES ('linux一些命令' , '<p>本实验均在centos7上完成<br/></p>' , '1560232973' , 1 , 'xk' , 0 , '42' , '期末实验' , '2' , '2019.06') [ RunTime:0.043305s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:53+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/list
+[运行时间：0.009153s] [吞吐率：109.26req/s] [内存消耗：406.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000842s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001572s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.001084s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:57+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.009348s] [吞吐率：106.97req/s] [内存消耗：466.69kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000930s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000509s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:57+08:00 ] 39.176.195.177 GET blog_api.xukai.ink/tag/get
+[运行时间：0.008095s] [吞吐率：123.53req/s] [内存消耗：395.98kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001040s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001136s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000575s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:02:57+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/getOne
+[运行时间：0.010892s] [吞吐率：91.81req/s] [内存消耗：403.06kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'getOne',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->getOne[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002527s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:40:19+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/edit
+[运行时间：0.113892s] [吞吐率：8.78req/s] [内存消耗：456.55kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'edit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '2803',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'linux一些命令',
+  'content' => '<p>本实验均在centos7上完成<br/></p><p><br/></p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>修改ip地址&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">/etc/sysconfig/network-scripts/ifcfg-ens</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;</span><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">如果要启动动态ip则需要把BOOTPROTO=dhcp&nbsp; &nbsp;onboot=yes</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 静态ip也是一样打开上面的配置文件，将bootProto修改成static，onboot改成yes</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 再加入IPADDR=192.168.238.1&nbsp; &nbsp; GATEWAY&nbsp; &nbsp; NETMASK</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 然后重启网络服务&nbsp;&nbsp;</span><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;">service network restart</span></p></li><li><p><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;"></span></p></li></ol><p><span style="color:#494949;font-family:Arial, Helvetica, sans-serif"><span style="background-color: rgb(255, 255, 255);"></span></span></p>',
+  'c_id' => '42,期末实验',
+  't_id' => '2',
+  'id' => '30',
+  'userId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->edit[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000927s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001089s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000560s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `u_id`=NULL,`u_name`=NULL,`content`='<p>本实验均在centos7上完成<br/></p><p><br/></p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>修改ip地址&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">/etc/sysconfig/network-scripts/ifcfg-ens</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp;&nbsp;</span><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">如果要启动动态ip则需要把BOOTPROTO=dhcp&nbsp; &nbsp;onboot=yes</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 静态ip也是一样打开上面的配置文件，将bootProto修改成static，onboot改成yes</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 再加入IPADDR=192.168.238.1&nbsp; &nbsp; GATEWAY&nbsp; &nbsp; NETMASK</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 然后重启网络服务&nbsp;&nbsp;</span><span style=\"background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;\">service network restart</span></p></li><li><p><span style=\"background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;\"></span></p></li></ol><p><span style=\"color:#494949;font-family:Arial, Helvetica, sans-serif\"><span style=\"background-color: rgb(255, 255, 255);\"></span></span></p>',`e_time`='1560235219'  WHERE  `id` = 30 [ RunTime:0.000921s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:40:19+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/list
+[运行时间：0.009517s] [吞吐率：105.08req/s] [内存消耗：406.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002512s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000525s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:44:57+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_d
+[运行时间：0.012825s] [吞吐率：77.97req/s] [内存消耗：466.69kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_d',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_d[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000956s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:44:57+08:00 ] 39.176.195.177 GET blog_api.xukai.ink/tag/get
+[运行时间：0.012752s] [吞吐率：78.42req/s] [内存消耗：395.98kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Tag',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Tag->get[ C:\wamp64\www\blog\application\index\controller\Tag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000885s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.000959s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000457s ]
+---------------------------------------------------------------
+[ 2019-06-11T14:44:57+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/getOne
+[运行时间：0.008939s] [吞吐率：111.87req/s] [内存消耗：404.74kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'getOne',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->getOne[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000892s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001607s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000493s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:03:17+08:00 ] 42.236.10.78 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.035863s] [吞吐率：27.88req/s] [内存消耗：468.05kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021424s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.001191s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:03:17+08:00 ] 42.236.10.75 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.024267s] [吞吐率：41.21req/s] [内存消耗：401.84kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011682s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001757s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.001414s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:03:17+08:00 ] 42.236.10.78 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.035568s] [吞吐率：28.12req/s] [内存消耗：429.02kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011985s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001836s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.003680s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.001342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001826s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.002194s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:03:24+08:00 ] 42.236.10.78 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.008371s] [吞吐率：119.46req/s] [内存消耗：184.41kb] [文件加载：26]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T15:06:32+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/edit
+[运行时间：0.016575s] [吞吐率：60.33req/s] [内存消耗：499.94kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'edit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '8790',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/admin/article_edit.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'linux一些命令',
+  'content' => '<p>本实验均在centos7上完成<br/></p><p><br/></p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p>修改ip地址&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">/etc/sysconfig/network-scripts/ifcfg-ens</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;</span><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">如果要启动动态ip则需要把BOOTPROTO=dhcp&nbsp; &nbsp;onboot=yes</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 静态ip也是一样打开上面的配置文件，将bootProto修改成static，onboot改成yes</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 再加入IPADDR=192.168.238.1&nbsp; &nbsp; GATEWAY&nbsp; &nbsp; NETMASK</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;">&nbsp; 然后重启网络服务&nbsp;&nbsp;</span><span style="background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;">service network restart</span></p></li><li><p style="text-align: justify; "><span style="color:#333333"><span style="font-size: 14px; background-color: rgb(250, 250, 252);">光盘yum源配置</span></span></p><p style="text-align: justify; "><span style="color:#333333"><span style="font-size: 14px; background-color: rgb(250, 250, 252);">1.挂载光盘<br/>&nbsp; 使用df -h查看磁盘空间，没有相关挂载点，mkdir&nbsp; /mnt/rom 创建空目录，作为光盘挂载点，mount -o loop /dev/cdrom /mnt/rom 挂载到指定路径，<br/>&nbsp;2.让网络yum源失效<br/>&nbsp; &nbsp;备份/etc/yum.repose.d下面的所有文件，&nbsp; cp -r /etc/yum.repose.d/&nbsp; /home/data<br/>&nbsp; &nbsp;cd /etc/yum.repose.d/<br/>&nbsp; &nbsp;mv Centos-Base.repo CentOs-Base.repo.bak<br/>&nbsp; &nbsp;mv <span style="color: rgb(102, 102, 102); font-family: 宋体, Arial; background-color: rgb(255, 255, 255);">CentOS-Debuginfo.repo CentOS-Debuginfo.repo.bak</span></span></span></p></li><li><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);">修改光盘yum文件<br/>vim /etc/yum.repose.d/CentOs-Media.repo<br/>修改内容<br/>[c7-media]<br/>&nbsp; 注释掉这三个地址<br/>&nbsp;#baseurl=<a href="http://file:///media/CentOs">file:///media/CentO</a>S/<br/>&nbsp;#<a href="http://file:///media/cdrom/">file:///media/cdrom/</a><br/>&nbsp;#<a href="http://file:///media/cdrecorder/">file:///media/cdrecorder/</a><br/>baseurl=<a href="http://file:///mnt/rom/">file:///mnt/rom/</a>&nbsp; &nbsp;修改成自己挂载的光盘地址<br/>gpgcheck=1&nbsp;&nbsp;&nbsp;&nbsp;使数字证书生效<br/>enabled=1&nbsp;&nbsp;&nbsp;&nbsp; 使容器生效</span></font></p></li><li><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);">验证yum源<br/>yum clean all&nbsp; 清空yum缓存，改完配置文件后需要运行该命令<br/>yum list&nbsp;&nbsp;&nbsp;&nbsp;查询所有可用软件包列表<br/>yum repolist&nbsp; &nbsp;显示yum源信息</span></font></p></li></ol><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"><br/></span></font></p><p style="text-align: justify; "><font color="#666666" face="宋体, Arial"><span style="font-size: 14px; background-color: rgb(255, 255, 255);"></span></font></p><p><span style="color:#494949;font-family:Arial, Helvetica, sans-serif"><span style="background-color: rgb(255, 255, 255);"></span></span></p>',
+  'c_id' => '42,期末实验',
+  't_id' => '2',
+  'id' => '30',
+  'userId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->edit[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001152s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `content`='<p>本实验均在centos7上完成<br/></p><p><br/></p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>修改ip地址&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">/etc/sysconfig/network-scripts/ifcfg-ens</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp;&nbsp;</span><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">如果要启动动态ip则需要把BOOTPROTO=dhcp&nbsp; &nbsp;onboot=yes</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 静态ip也是一样打开上面的配置文件，将bootProto修改成static，onboot改成yes</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 再加入IPADDR=192.168.238.1&nbsp; &nbsp; GATEWAY&nbsp; &nbsp; NETMASK</span></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif;\">&nbsp; 然后重启网络服务&nbsp;&nbsp;</span><span style=\"background-color: rgb(250, 250, 252); color: rgb(51, 51, 51); font-size: 14px; text-align: justify;\">service network restart</span></p></li><li><p style=\"text-align: justify; \"><span style=\"color:#333333\"><span style=\"font-size: 14px; background-color: rgb(250, 250, 252);\">光盘yum源配置</span></span></p><p style=\"text-align: justify; \"><span style=\"color:#333333\"><span style=\"font-size: 14px; background-color: rgb(250, 250, 252);\">1.挂载光盘<br/>&nbsp; 使用df -h查看磁盘空间，没有相关挂载点，mkdir&nbsp; /mnt/rom 创建空目录，作为光盘挂载点，mount -o loop /dev/cdrom /mnt/rom 挂载到指定路径，<br/>&nbsp;2.让网络yum源失效<br/>&nbsp; &nbsp;备份/etc/yum.repose.d下面的所有文件，&nbsp; cp -r /etc/yum.repose.d/&nbsp; /home/data<br/>&nbsp; &nbsp;cd /etc/yum.repose.d/<br/>&nbsp; &nbsp;mv Centos-Base.repo CentOs-Base.repo.bak<br/>&nbsp; &nbsp;mv <span style=\"color: rgb(102, 102, 102); font-family: 宋体, Arial; background-color: rgb(255, 255, 255);\">CentOS-Debuginfo.repo CentOS-Debuginfo.repo.bak</span></span></span></p></li><li><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\">修改光盘yum文件<br/>vim /etc/yum.repose.d/CentOs-Media.repo<br/>修改内容<br/>[c7-media]<br/>&nbsp; 注释掉这三个地址<br/>&nbsp;#baseurl=<a href=\"http://file:///media/CentOs\">file:///media/CentO</a>S/<br/>&nbsp;#<a href=\"http://file:///media/cdrom/\">file:///media/cdrom/</a><br/>&nbsp;#<a href=\"http://file:///media/cdrecorder/\">file:///media/cdrecorder/</a><br/>baseurl=<a href=\"http://file:///mnt/rom/\">file:///mnt/rom/</a>&nbsp; &nbsp;修改成自己挂载的光盘地址<br/>gpgcheck=1&nbsp;&nbsp;&nbsp;&nbsp;使数字证书生效<br/>enabled=1&nbsp;&nbsp;&nbsp;&nbsp; 使容器生效</span></font></p></li><li><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\">验证yum源<br/>yum clean all&nbsp; 清空yum缓存，改完配置文件后需要运行该命令<br/>yum list&nbsp;&nbsp;&nbsp;&nbsp;查询所有可用软件包列表<br/>yum repolist&nbsp; &nbsp;显示yum源信息</span></font></p></li></ol><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"><br/></span></font></p><p style=\"text-align: justify; \"><font color=\"#666666\" face=\"宋体, Arial\"><span style=\"font-size: 14px; background-color: rgb(255, 255, 255);\"></span></font></p><p><span style=\"color:#494949;font-family:Arial, Helvetica, sans-serif\"><span style=\"background-color: rgb(255, 255, 255);\"></span></span></p>',`e_time`='1560236792'  WHERE  `id` = 30 [ RunTime:0.000605s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:06:32+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/list
+[运行时间：0.010041s] [吞吐率：99.59req/s] [内存消耗：406.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/admin/article.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002595s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`c_title`,`c_time`,`hit` FROM `b_article` WHERE  `status` = 1 [ RunTime:0.000572s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.013798s] [吞吐率：72.47req/s] [内存消耗：468.01kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001026s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.013869s] [吞吐率：72.10req/s] [内存消耗：428.98kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000666s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.003298s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.000813s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.011765s] [吞吐率：85.00req/s] [内存消耗：401.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000809s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.000563s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:06+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.008645s] [吞吐率：115.67req/s] [内存消耗：190.38kb] [文件加载：24]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '8',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'userId' => '1',
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T15:07:07+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.019343s] [吞吐率：51.70req/s] [内存消耗：468.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007957s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001817s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.001324s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:07+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_detail
+[运行时间：0.017184s] [吞吐率：58.19req/s] [内存消耗：455.74kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_detail[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001746s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001836s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.003323s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `hit`=`hit`+1  WHERE  `id` = 30 [ RunTime:0.001089s ]
+---------------------------------------------------------------
+[ 2019-06-11T15:07:07+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/common/get
+[运行时间：0.026044s] [吞吐率：38.40req/s] [内存消耗：465.27kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'commons',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'article_id' => '30',
+)
+[ info ] [ RUN ] app\index\controller\Commons->get[ C:\wamp64\www\blog\application\index\controller\Commons.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000883s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT * FROM `common` WHERE  `article_id` = 30 [ RunTime:0.000502s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:31+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.014378s] [吞吐率：69.55req/s] [内存消耗：468.41kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001161s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000429s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:31+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.016419s] [吞吐率：60.91req/s] [内存消耗：429.38kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000680s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.001247s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.001122s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:31+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.009199s] [吞吐率：108.71req/s] [内存消耗：184.76kb] [文件加载：26]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T16:13:31+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.011951s] [吞吐率：83.68req/s] [内存消耗：402.20kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000856s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.000722s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:32+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.019999s] [吞吐率：50.00req/s] [内存消耗：468.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009695s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001949s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.001314s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:32+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_detail
+[运行时间：0.018186s] [吞吐率：54.99req/s] [内存消耗：455.74kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_detail[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001428s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001804s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.002996s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000678s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `hit`=`hit`+1  WHERE  `id` = 30 [ RunTime:0.000574s ]
+---------------------------------------------------------------
+[ 2019-06-11T16:13:32+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/common/get
+[运行时间：0.010338s] [吞吐率：96.73req/s] [内存消耗：465.27kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'commons',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'article_id' => '30',
+)
+[ info ] [ RUN ] app\index\controller\Commons->get[ C:\wamp64\www\blog\application\index\controller\Commons.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002525s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT * FROM `common` WHERE  `article_id` = 30 [ RunTime:0.000505s ]
+---------------------------------------------------------------
+[ 2019-06-11T17:27:28+08:00 ] 42.236.10.75 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.016957s] [吞吐率：58.97req/s] [内存消耗：468.20kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002670s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001277s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000467s ]
+---------------------------------------------------------------
+[ 2019-06-11T17:27:28+08:00 ] 42.236.10.78 POST blog_api.xukai.ink/article/get_detail
+[运行时间：0.017967s] [吞吐率：55.66req/s] [内存消耗：303.01kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_detail[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T22:00:14+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.016846s] [吞吐率：59.36req/s] [内存消耗：468.01kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001255s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001143s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2019-06-11T22:00:14+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_list
+[运行时间：0.019597s] [吞吐率：51.03req/s] [内存消耗：428.98kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_list[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000928s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT article_id, count(article_id) as num FROM `common` GROUP BY `article_id` [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`u_name`,`hit`,`c_id`,`c_title`,`t_id`,`c_time` FROM `b_article` WHERE  `status` = 1 ORDER BY `c_time` DESC [ RunTime:0.000927s ]
+---------------------------------------------------------------
+[ 2019-06-11T22:00:14+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/category/get_guidang
+[运行时间：0.013032s] [吞吐率：76.73req/s] [内存消耗：401.80kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_guidang',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_guidang[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000709s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT `guidang` FROM `b_article` WHERE  `status` = 1 GROUP BY `guidang` [ RunTime:0.000687s ]
+---------------------------------------------------------------
+[ 2019-06-11T22:00:14+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/user/isLogin
+[运行时间：0.007961s] [吞吐率：125.61req/s] [内存消耗：184.23kb] [文件加载：26]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'isLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->isLogin[ C:\wamp64\www\blog\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-11T22:00:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/cate/get_cs
+[运行时间：0.020817s] [吞吐率：48.04req/s] [内存消耗：468.02kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'getCategory_s',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->getCategory_s[ C:\wamp64\www\blog\application\index\controller\Category.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008715s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_category` [ RunTime:0.001936s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` = 0 [ RunTime:0.000998s ]
+[ sql ] [ SQL ] SELECT * FROM `b_category` WHERE  `pid` > 0 [ RunTime:0.001397s ]
+---------------------------------------------------------------
+[ 2019-06-11T22:00:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/article/get_detail
+[运行时间：0.017723s] [吞吐率：56.42req/s] [内存消耗：455.74kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'get_detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->get_detail[ C:\wamp64\www\blog\application\index\controller\Article.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001741s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_tag` [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SELECT * FROM `b_tag` WHERE  (  id>=1 ) [ RunTime:0.001498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_article` [ RunTime:0.003209s ]
+[ sql ] [ SQL ] SELECT * FROM `b_article` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] UPDATE `b_article`  SET `hit`=`hit`+1  WHERE  `id` = 30 [ RunTime:0.000555s ]
+---------------------------------------------------------------
+[ 2019-06-11T22:00:15+08:00 ] 39.176.195.177 POST blog_api.xukai.ink/common/get
+[运行时间：0.011291s] [吞吐率：88.57req/s] [内存消耗：465.27kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'commons',
+    2 => 'get',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'blog_api.xukai.ink',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'origin' => 'http://blog.xukai.ink',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://blog.xukai.ink/detail.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'article_id' => '30',
+)
+[ info ] [ RUN ] app\index\controller\Commons->get[ C:\wamp64\www\blog\application\index\controller\Commons.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002637s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `common` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `common` WHERE  `article_id` = 30 [ RunTime:0.000541s ]

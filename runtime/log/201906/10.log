@@ -1,0 +1,10 @@
+---------------------------------------------------------------
+[ 2019-06-10T10:39:24+08:00 ] 47.92.6.234 GET blog_api.xukai.ink/
+[运行时间：0.015850s] [吞吐率：63.09req/s] [内存消耗：164.34kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-10T11:39:46+08:00 ] 117.132.183.17 GET blog_api.xukai.ink/
+[运行时间：0.009755s] [吞吐率：102.51req/s] [内存消耗：164.35kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\blog\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
